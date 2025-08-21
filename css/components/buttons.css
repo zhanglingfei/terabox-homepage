@@ -1,0 +1,469 @@
+/* ==================== Button Components ==================== */
+/* Unified button system using BEM methodology and CSS variables */
+
+/* ==================== Base Button ==================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    color: inherit;
+    
+    /* Default size */
+    padding: var(--button-padding);
+    font-size: var(--font-size-md);
+    min-height: var(--input-height-lg);
+}
+
+.btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.btn:disabled {
+    opacity: var(--opacity-disabled);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ==================== Button Variants ==================== */
+.btn--primary {
+    background: var(--gradient-primary);
+    color: #000000;
+    border: var(--border-width-thick) solid transparent;
+    box-shadow: var(--shadow-md);
+}
+
+.btn--primary:hover {
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+.btn--primary:active {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md), 0 0 15px rgba(159, 213, 0, 0.3);
+}
+
+.btn--secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: var(--border-width-thick) solid var(--primary-color);
+}
+
+.btn--secondary:hover {
+    background: rgba(159, 213, 0, 0.1);
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-md), 0 0 15px rgba(159, 213, 0, 0.2);
+}
+
+.btn--secondary:active {
+    background: rgba(159, 213, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--text-light);
+    border: var(--border-width) solid transparent;
+}
+
+.btn--ghost:hover {
+    color: var(--primary-color);
+    background: rgba(159, 213, 0, 0.05);
+    border-color: rgba(159, 213, 0, 0.3);
+}
+
+.btn--dark {
+    background: linear-gradient(45deg, var(--bg-light), var(--bg-medium));
+    color: var(--text-white);
+    border: var(--border-width-thick) solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--dark:hover {
+    transform: var(--hover-lift-sm);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(45deg, var(--bg-medium), var(--bg-light));
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn--gradient {
+    background: var(--gradient-card-bg);
+    color: var(--text-white);
+    border: var(--border-width) solid rgba(159, 213, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn--gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(159, 213, 0, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn--gradient:hover::before {
+    left: 100%;
+}
+
+.btn--gradient:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow);
+}
+
+/* ==================== Button Sizes ==================== */
+.btn--sm {
+    padding: var(--button-padding-sm);
+    font-size: var(--font-size-sm);
+    min-height: var(--input-height);
+    border-radius: var(--border-radius-sm);
+}
+
+.btn--md {
+    padding: var(--button-padding);
+    font-size: var(--font-size-md);
+    min-height: var(--input-height-lg);
+    border-radius: var(--border-radius-md);
+}
+
+.btn--lg {
+    padding: var(--button-padding-lg);
+    font-size: var(--font-size-lg);
+    min-height: 56px;
+    border-radius: var(--border-radius-lg);
+}
+
+.btn--xl {
+    padding: var(--spacing-lg) var(--spacing-4xl);
+    font-size: var(--font-size-xl);
+    min-height: 64px;
+    border-radius: var(--border-radius-xl);
+}
+
+/* ==================== Button States ==================== */
+.btn--loading {
+    pointer-events: none;
+    position: relative;
+}
+
+.btn--loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.btn--loading .btn__text {
+    opacity: 0;
+}
+
+/* ==================== Button Modifiers ==================== */
+.btn--block {
+    width: 100%;
+    display: flex;
+}
+
+.btn--rounded {
+    border-radius: var(--border-radius-3xl);
+}
+
+.btn--square {
+    border-radius: 0;
+}
+
+.btn--icon-only {
+    padding: var(--spacing-md);
+    aspect-ratio: 1;
+    min-width: var(--input-height-lg);
+}
+
+.btn--icon-only.btn--sm {
+    padding: var(--spacing-sm);
+    min-width: var(--input-height);
+}
+
+.btn--icon-only.btn--lg {
+    padding: var(--spacing-lg);
+    min-width: 56px;
+}
+
+/* ==================== Button Groups ==================== */
+.btn-group {
+    display: inline-flex;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-group .btn {
+    border-radius: 0;
+    border-right-width: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-group .btn:first-child {
+    border-top-left-radius: var(--border-radius-md);
+    border-bottom-left-radius: var(--border-radius-md);
+}
+
+.btn-group .btn:last-child {
+    border-top-right-radius: var(--border-radius-md);
+    border-bottom-right-radius: var(--border-radius-md);
+    border-right-width: var(--border-width-thick);
+}
+
+.btn-group .btn:hover,
+.btn-group .btn:focus {
+    z-index: 2;
+}
+
+/* ==================== Special Buttons ==================== */
+.cta-button {
+    @extend .btn;
+    @extend .btn--primary;
+    @extend .btn--lg;
+    
+    background: var(--gradient-primary);
+    color: #000000;
+    padding: 15px 30px;
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-md);
+}
+
+.cta-button:hover {
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+/* Hero CTA specific styling */
+.hero .cta-button {
+    background: linear-gradient(45deg, var(--bg-light), var(--bg-medium));
+    color: var(--text-white);
+    border: var(--border-width-thick) solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-3xl);
+    font-size: var(--font-size-xl);
+    height: 60px;
+    padding: 15px 44px;
+}
+
+.hero .cta-button:hover {
+    background: linear-gradient(45deg, var(--bg-medium), var(--bg-light));
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: var(--hover-lift-sm);
+}
+
+/* ==================== Apply Buttons ==================== */
+.apply-btn {
+    @extend .btn;
+    @extend .btn--primary;
+    @extend .btn--sm;
+    @extend .btn--block;
+    
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.apply-btn:hover {
+    transform: var(--hover-lift-sm);
+    box-shadow: 0 5px 15px rgba(159, 213, 0, 0.3);
+}
+
+/* ==================== Submit Buttons ==================== */
+.submit-button {
+    @extend .btn;
+    @extend .btn--primary;
+    @extend .btn--lg;
+    @extend .btn--block;
+    
+    margin: var(--spacing-lg) 0;
+}
+
+.submit-button:hover:not(:disabled) {
+    transform: var(--hover-lift);
+    box-shadow: 0 5px 15px rgba(159, 213, 0, 0.3);
+}
+
+.submit-button:disabled {
+    opacity: var(--opacity-disabled);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ==================== Tab Buttons ==================== */
+.tab-button {
+    @extend .btn;
+    @extend .btn--ghost;
+    
+    background: var(--bg-card);
+    color: var(--text-gray);
+    border: var(--border-width-thick) solid var(--text-dark);
+    padding: 15px 40px;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--border-radius-3xl);
+    min-width: 180px;
+    gap: var(--spacing-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-button:hover {
+    background: rgba(26, 26, 26, 0.95);
+    border-color: var(--text-muted);
+    transform: var(--hover-lift-sm);
+    box-shadow: var(--shadow-md);
+    color: var(--text-light);
+}
+
+.tab-button.active {
+    background: linear-gradient(45deg, rgba(159, 213, 0, 0.2), rgba(127, 184, 0, 0.2));
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* ==================== Language Buttons ==================== */
+.lang-btn {
+    @extend .btn;
+    @extend .btn--ghost;
+    @extend .btn--icon-only;
+    @extend .btn--sm;
+    
+    background: transparent;
+    border: var(--border-width) solid var(--text-dark);
+    color: var(--text-gray);
+    width: 50px;
+    height: 40px;
+    font-size: 21px;
+    padding: var(--spacing-sm);
+}
+
+.lang-btn:hover {
+    border-color: var(--primary-color);
+    background: rgba(159, 213, 0, 0.1);
+    color: var(--primary-color);
+}
+
+.lang-btn.active {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: #000;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    .btn--lg {
+        padding: var(--spacing-md) var(--spacing-xl);
+        font-size: var(--font-size-md);
+        min-height: 48px;
+    }
+    
+    .btn--xl {
+        padding: var(--spacing-lg) var(--spacing-2xl);
+        font-size: var(--font-size-lg);
+        min-height: 56px;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: var(--font-size-md);
+    }
+    
+    .hero .cta-button {
+        padding: 10px 25px;
+        font-size: var(--font-size-base);
+        height: auto;
+    }
+    
+    .tab-button {
+        padding: 12px 30px;
+        min-width: 150px;
+        font-size: var(--font-size-base);
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        border-right-width: var(--border-width-thick);
+        border-bottom-width: 0;
+    }
+    
+    .btn-group .btn:first-child {
+        border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+    }
+    
+    .btn-group .btn:last-child {
+        border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+        border-bottom-width: var(--border-width-thick);
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-button {
+        padding: 10px 20px;
+        min-width: 130px;
+        font-size: var(--font-size-sm);
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}

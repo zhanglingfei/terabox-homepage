@@ -1,0 +1,244 @@
+/* ==================== CSS Reset & Base Styles ==================== */
+/* Modern CSS reset with consistent base styles for all elements */
+
+/* ==================== Universal Reset ==================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================== Document & Body ==================== */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    background: var(--gradient-hero-bg);
+    color: var(--text-white);
+    line-height: var(--line-height-relaxed);
+    overflow-x: hidden;
+    min-height: 100vh;
+    font-size: var(--font-size-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== Typography Reset ==================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: inherit;
+}
+
+p {
+    margin-bottom: 0;
+    line-height: var(--line-height-relaxed);
+}
+
+/* ==================== Lists ==================== */
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ==================== Links ==================== */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all var(--transition-normal);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ==================== Form Elements ==================== */
+button, input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: var(--opacity-disabled);
+}
+
+input, textarea, select {
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+/* ==================== Media Elements ==================== */
+img, video, canvas, audio, iframe, embed, object {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    border-style: none;
+}
+
+/* ==================== Tables ==================== */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0;
+}
+
+/* ==================== Interactive Elements ==================== */
+summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* ==================== Scrollbar Styling ==================== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-darkest);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: var(--border-radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
+}
+
+/* Firefox scrollbar */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--bg-darkest);
+}
+
+/* ==================== Focus Management ==================== */
+:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ==================== Print Styles ==================== */
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    
+    img {
+        page-break-inside: avoid;
+    }
+    
+    h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+}
+
+/* ==================== High Contrast Mode Support ==================== */
+@media (prefers-contrast: high) {
+    :root {
+        --text-white: #ffffff;
+        --text-light: #ffffff;
+        --bg-darkest: #000000;
+        --bg-dark: #000000;
+        --primary-color: #ffffff;
+    }
+}
+
+/* ==================== Reduced Motion Support ==================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ==================== Loading State ==================== */
+body:not(.loaded) {
+    overflow: hidden;
+}
+
+body.loaded {
+    overflow-x: hidden;
+    overflow-y: auto;
+}

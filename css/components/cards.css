@@ -1,0 +1,608 @@
+/* ==================== Card Components ==================== */
+/* Unified card system using BEM methodology and CSS variables */
+
+/* ==================== Base Card ==================== */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    border: var(--border-width) solid rgba(159, 213, 0, 0.1);
+    padding: var(--card-padding);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    border-color: var(--primary-color);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--border-width-accent);
+    height: 0;
+    background: var(--gradient-primary);
+    transition: height var(--transition-normal);
+    z-index: 1;
+}
+
+.card:hover::before {
+    height: 100%;
+}
+
+/* ==================== Card Variants ==================== */
+.card--elevated {
+    box-shadow: var(--shadow-lg);
+    border: none;
+}
+
+.card--elevated:hover {
+    box-shadow: var(--shadow-2xl), var(--shadow-glow);
+    transform: translateY(-8px);
+}
+
+.card--glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    border: var(--border-width) solid rgba(255, 255, 255, 0.1);
+}
+
+.card--glass:hover {
+    background: rgba(26, 26, 26, 0.95);
+    border-color: var(--primary-color);
+}
+
+.card--gradient {
+    background: var(--gradient-card-bg);
+    border: var(--border-width) solid rgba(159, 213, 0, 0.2);
+}
+
+.card--premium {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.6));
+    border: var(--border-width-thick) solid rgba(159, 213, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.card--premium::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    animation: slideGradient 3s infinite;
+}
+
+@keyframes slideGradient {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ==================== Card Sizes ==================== */
+.card--sm {
+    padding: var(--card-padding-sm);
+    border-radius: var(--border-radius-md);
+}
+
+.card--lg {
+    padding: var(--spacing-3xl);
+    border-radius: var(--border-radius-xl);
+}
+
+.card--xl {
+    padding: var(--spacing-4xl);
+    border-radius: var(--border-radius-2xl);
+}
+
+/* ==================== Business Cards ==================== */
+.business-card {
+    @extend .card;
+    @extend .card--glass;
+    
+    min-height: 420px;
+    border-left: var(--border-width-heavy) solid var(--primary-color);
+    justify-content: flex-start;
+    gap: var(--spacing-md);
+}
+
+.business-card:hover {
+    transform: var(--hover-lift);
+    box-shadow: 0 15px 30px rgba(159, 213, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.business-card__icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    opacity: 0.9;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 2;
+}
+
+.business-card__title {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    position: relative;
+    z-index: 2;
+}
+
+.business-card__description {
+    color: var(--text-light);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 2;
+}
+
+.business-card__services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 2;
+}
+
+.business-card__service-tag {
+    background: rgba(159, 213, 0, 0.15);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: var(--border-radius-lg);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    border: var(--border-width) solid rgba(159, 213, 0, 0.3);
+    transition: all var(--transition-normal);
+}
+
+.business-card__service-tag:hover {
+    background: rgba(159, 213, 0, 0.25);
+    transform: var(--hover-lift-sm);
+}
+
+.business-card__achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.business-card__achievement {
+    background: rgba(159, 213, 0, 0.1);
+    color: var(--primary-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-lg);
+    font-size: var(--font-size-xs);
+    border: var(--border-width) solid rgba(159, 213, 0, 0.3);
+}
+
+/* ==================== News Cards ==================== */
+.news-card {
+    @extend .card;
+    
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.news-card:hover {
+    transform: var(--hover-lift);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.news-card__image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, var(--text-dark), var(--text-muted));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: var(--spacing-2xl);
+    margin-bottom: 0;
+}
+
+.news-card__content {
+    padding: var(--spacing-xl);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card__title {
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-tight);
+}
+
+.news-card__text {
+    color: var(--text-light);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    flex-grow: 1;
+}
+
+.news-card__badge {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: var(--gradient-primary);
+    color: #000;
+    padding: 5px 12px;
+    border-radius: var(--border-radius-2xl);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.news-card__date {
+    color: var(--text-gray);
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.news-card__date i {
+    color: var(--primary-color);
+    font-size: 10px;
+}
+
+.news-card__category {
+    display: inline-block;
+    background: rgba(159, 213, 0, 0.15);
+    color: var(--primary-color);
+    padding: 3px 10px;
+    border-radius: var(--border-radius-lg);
+    font-size: var(--font-size-xs);
+    margin-left: 10px;
+    border: var(--border-width) solid rgba(159, 213, 0, 0.3);
+}
+
+/* ==================== Position Cards ==================== */
+.position-card {
+    @extend .card;
+    
+    background: var(--bg-darkest);
+    border: var(--border-width-thick) solid var(--text-dark);
+    padding: var(--spacing-xl);
+    transition: all var(--transition-normal);
+}
+
+.position-card:hover {
+    border-color: var(--primary-color);
+    transform: var(--hover-lift-sm);
+    box-shadow: 0 10px 25px rgba(159, 213, 0, 0.1);
+}
+
+.position-card::before {
+    background: var(--gradient-primary);
+}
+
+.position-card__title {
+    color: var(--primary-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    border-bottom: var(--border-width) solid var(--text-dark);
+    padding-bottom: var(--spacing-sm);
+}
+
+.position-card__description {
+    margin-bottom: var(--spacing-lg);
+}
+
+.position-card__description p {
+    color: var(--text-light);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-base);
+}
+
+.position-card__skills {
+    color: var(--text-light);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-sm);
+    background: rgba(159, 213, 0, 0.05);
+    border-radius: var(--border-radius-sm);
+    border-left: 3px solid var(--primary-color);
+}
+
+.position-card__skills strong {
+    color: var(--primary-color);
+}
+
+/* ==================== Metric Cards ==================== */
+.metric-card {
+    @extend .card;
+    
+    text-align: center;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(159, 213, 0, 0.1) 0%, transparent 70%);
+    animation: rotateGradient 10s linear infinite;
+}
+
+@keyframes rotateGradient {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.metric-card:hover {
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+    border-color: var(--primary-color);
+}
+
+.metric-card__icon {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.metric-card__number {
+    font-size: 48px;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.metric-card__label {
+    color: var(--text-light);
+    font-size: var(--font-size-md);
+    position: relative;
+    z-index: 1;
+}
+
+/* ==================== Industry Cards ==================== */
+.industry-card {
+    @extend .card;
+    
+    text-align: center;
+    padding: var(--spacing-2xl);
+}
+
+.industry-card:hover {
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+    border-color: var(--primary-color);
+}
+
+.industry-card__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-lg);
+    background: linear-gradient(45deg, rgba(159, 213, 0, 0.2), rgba(127, 184, 0, 0.2));
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.industry-card__icon i {
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+.industry-card__title {
+    color: var(--text-white);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-xl);
+}
+
+.industry-card__description {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+}
+
+.industry-card__projects {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.industry-card__project {
+    color: var(--text-gray);
+    padding: 5px 0;
+    font-size: var(--font-size-sm);
+    padding-left: var(--spacing-lg);
+    position: relative;
+}
+
+.industry-card__project::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* ==================== Model Cards ==================== */
+.model-card {
+    @extend .card;
+    
+    padding: var(--spacing-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.model-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+
+.model-card:hover::after {
+    transform: translateX(0);
+}
+
+.model-card:hover {
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-xl), 0 20px 40px rgba(159, 213, 0, 0.15);
+    background: rgba(26, 26, 26, 0.9);
+}
+
+.model-card__icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--spacing-lg);
+    background: linear-gradient(45deg, rgba(159, 213, 0, 0.2), rgba(127, 184, 0, 0.2));
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model-card__icon i {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.model-card__title {
+    color: var(--text-white);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-lg);
+    text-align: center;
+}
+
+.model-card__description {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-base);
+    text-align: center;
+}
+
+.model-card__features {
+    list-style: none;
+    padding: 0;
+}
+
+.model-card__feature {
+    color: var(--text-gray);
+    padding: var(--spacing-sm) 0;
+    font-size: var(--font-size-sm);
+    padding-left: var(--spacing-lg);
+    position: relative;
+}
+
+.model-card__feature::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+}
+
+/* ==================== Company Info Card ==================== */
+.company-info {
+    @extend .card;
+    
+    margin-top: var(--spacing-3xl);
+    border-left: var(--border-width-heavy) solid var(--primary-color);
+}
+
+.company-info__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-2xl);
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+}
+
+.company-info__title {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-2xl);
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    .card {
+        padding: var(--card-padding-sm);
+    }
+    
+    .business-card {
+        min-height: 380px;
+        padding: var(--spacing-lg);
+    }
+    
+    .business-card__icon {
+        font-size: 2.2rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .business-card__title {
+        font-size: var(--font-size-md);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .business-card__description {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .metric-card__number {
+        font-size: 36px;
+    }
+    
+    .industry-card,
+    .model-card,
+    .position-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .business-card__services {
+        gap: 5px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .business-card__service-tag {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+}

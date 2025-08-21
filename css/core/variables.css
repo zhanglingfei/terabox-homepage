@@ -1,0 +1,206 @@
+/* ==================== CSS Variables - Design System ==================== */
+/* Unified design system variables based on existing styles */
+
+:root {
+    /* ==================== Brand Colors ==================== */
+    --primary-color: #9FD500;
+    --secondary-color: #7FB800;
+    --accent-blue: #007bff;
+    --accent-cyan: #00bcd4;
+    --success-green: #28a745;
+    --error-red: #ff6b6b;
+    --warning-orange: #ffa726;
+    --award-gold: #ffd700;
+    
+    /* ==================== Background Colors ==================== */
+    --bg-darkest: #0a0a0a;
+    --bg-dark: #111111;
+    --bg-medium: #1a1a1a;
+    --bg-light: #2a2a2a;
+    --bg-card: rgba(26, 26, 26, 0.8);
+    --bg-glass: rgba(26, 26, 26, 0.9);
+    
+    /* ==================== Text Colors ==================== */
+    --text-white: #ffffff;
+    --text-light: #cccccc;
+    --text-gray: #999999;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    
+    /* ==================== Spacing Scale (8px grid system) ==================== */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 40px;
+    --spacing-3xl: 48px;
+    --spacing-4xl: 64px;
+    --spacing-5xl: 80px;
+    --spacing-6xl: 100px;
+    
+    /* ==================== Typography Scale ==================== */
+    --font-family-primary: 'Arial', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+    --font-family-monospace: 'Courier New', monospace;
+    
+    --font-size-xs: 12px;
+    --font-size-sm: 13px;
+    --font-size-base: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 24px;
+    --font-size-3xl: 28px;
+    --font-size-4xl: 32px;
+    --font-size-5xl: 36px;
+    --font-size-6xl: 48px;
+    --font-size-hero: 50px;
+    --font-size-hero-mobile: 28px;
+    
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    --line-height-tight: 1.1;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.6;
+    --line-height-loose: 1.8;
+    
+    /* ==================== Border & Radius ==================== */
+    --border-width: 1px;
+    --border-width-thick: 2px;
+    --border-width-accent: 3px;
+    --border-width-heavy: 4px;
+    
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --border-radius-2xl: 20px;
+    --border-radius-3xl: 25px;
+    --border-radius-full: 50%;
+    
+    /* ==================== Shadows ==================== */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 15px 30px rgba(0, 0, 0, 0.4);
+    --shadow-2xl: 0 20px 40px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(159, 213, 0, 0.3);
+    --shadow-glow-strong: 0 0 30px rgba(159, 213, 0, 0.5);
+    
+    /* ==================== Animations & Transitions ==================== */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-very-slow: 0.8s ease;
+    
+    --animation-duration-fast: 0.2s;
+    --animation-duration-normal: 0.6s;
+    --animation-duration-slow: 0.8s;
+    --animation-duration-very-slow: 1.2s;
+    
+    /* ==================== Z-Index Scale ==================== */
+    --z-index-dropdown: 1000;
+    --z-index-sticky: 1020;
+    --z-index-fixed: 1030;
+    --z-index-modal-backdrop: 1040;
+    --z-index-modal: 1050;
+    --z-index-popover: 1060;
+    --z-index-tooltip: 1070;
+    --z-index-toast: 1080;
+    
+    /* ==================== Responsive Breakpoints ==================== */
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+    
+    /* ==================== Container Sizes ==================== */
+    --container-max-width: 1200px;
+    --container-max-width-wide: 1400px;
+    --container-padding: 20px;
+    --container-padding-sm: 15px;
+    
+    /* ==================== Component Specific ==================== */
+    --section-padding: var(--spacing-6xl) 0;
+    --section-padding-sm: var(--spacing-5xl) 0;
+    
+    --card-padding: var(--spacing-2xl);
+    --card-padding-sm: var(--spacing-lg);
+    
+    --button-padding: var(--spacing-md) var(--spacing-2xl);
+    --button-padding-sm: var(--spacing-sm) var(--spacing-md);
+    --button-padding-lg: var(--spacing-lg) var(--spacing-3xl);
+    
+    --input-padding: var(--spacing-sm) var(--spacing-md);
+    --input-height: 40px;
+    --input-height-lg: 48px;
+    
+    /* ==================== Gradients ==================== */
+    --gradient-primary: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    --gradient-hero-bg: linear-gradient(135deg, var(--bg-darkest) 0%, var(--bg-medium) 30%, var(--bg-light) 70%, #0f0f0f 100%);
+    --gradient-card-bg: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.6));
+    --gradient-glass: linear-gradient(45deg, rgba(184, 229, 0, 0.1), rgba(127, 184, 0, 0.1));
+    
+    /* ==================== Opacity Values ==================== */
+    --opacity-disabled: 0.5;
+    --opacity-hover: 0.8;
+    --opacity-active: 0.6;
+    --opacity-overlay: 0.9;
+    --opacity-glass: 0.1;
+    --opacity-muted: 0.7;
+    
+    /* ==================== Grid & Layout ==================== */
+    --grid-gap: var(--spacing-2xl);
+    --grid-gap-sm: var(--spacing-lg);
+    --grid-gap-lg: var(--spacing-3xl);
+    
+    /* Common grid template patterns */
+    --grid-auto-fit-sm: repeat(auto-fit, minmax(250px, 1fr));
+    --grid-auto-fit-md: repeat(auto-fit, minmax(300px, 1fr));
+    --grid-auto-fit-lg: repeat(auto-fit, minmax(350px, 1fr));
+    
+    /* ==================== Form Elements ==================== */
+    --form-label-color: var(--primary-color);
+    --form-input-bg: var(--bg-darkest);
+    --form-input-border: var(--text-dark);
+    --form-input-border-focus: var(--primary-color);
+    --form-input-text: var(--text-white);
+    --form-placeholder-color: var(--text-gray);
+    
+    /* ==================== Hover & Focus States ==================== */
+    --hover-lift: translateY(-3px);
+    --hover-lift-sm: translateY(-2px);
+    --hover-lift-lg: translateY(-5px);
+    --hover-scale: scale(1.05);
+    --hover-scale-sm: scale(1.02);
+    --hover-scale-lg: scale(1.1);
+}
+
+/* ==================== Dark Mode Overrides ==================== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --shadow-glow: 0 0 25px rgba(159, 213, 0, 0.4);
+        --shadow-glow-strong: 0 0 40px rgba(159, 213, 0, 0.6);
+        --bg-card: rgba(15, 15, 15, 0.95);
+        --bg-glass: rgba(15, 15, 15, 0.98);
+    }
+}
+
+/* ==================== Reduced Motion Support ==================== */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0.01s;
+        --transition-normal: 0.01s;
+        --transition-slow: 0.01s;
+        --transition-very-slow: 0.01s;
+        
+        --animation-duration-fast: 0.01s;
+        --animation-duration-normal: 0.01s;
+        --animation-duration-slow: 0.01s;
+        --animation-duration-very-slow: 0.01s;
+    }
+}

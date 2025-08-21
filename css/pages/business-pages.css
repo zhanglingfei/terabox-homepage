@@ -1,0 +1,421 @@
+/* ==================== Business Pages - Specific Styles ==================== */
+/* Page-specific styles that extend the component system */
+/* These styles are imported by main.css */
+
+/* ==================== AI Solution Page Enhancements ==================== */
+.ai-hero-enhanced {
+    background: linear-gradient(135deg, 
+        var(--bg-darkest) 0%, 
+        #0a1a0a 30%, 
+        #1a2a1a 70%, 
+        var(--bg-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(159, 213, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(127, 184, 0, 0.08) 0%, transparent 50%);
+    animation: aiFloat 15s ease-in-out infinite;
+}
+
+@keyframes aiFloat {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(10px, -10px); }
+}
+
+.ai-icon-animated {
+    position: relative;
+    animation: aiPulse 3s ease-in-out infinite;
+}
+
+@keyframes aiPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.ai-orbit {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 2px solid rgba(159, 213, 0, 0.3);
+    border-radius: 50%;
+    animation: aiOrbit 8s linear infinite;
+}
+
+@keyframes aiOrbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ==================== Blockchain Page Enhancements ==================== */
+.blockchain-timeline {
+    position: relative;
+}
+
+.blockchain-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gradient-primary);
+    transform: translateX(-50%);
+}
+
+/* ==================== HR Page Enhancements ==================== */
+.hr-hero {
+    background: linear-gradient(135deg, 
+        var(--bg-darkest) 0%, 
+        #1a1a0a 30%, 
+        #2a2a1a 70%, 
+        var(--bg-dark) 100%);
+}
+
+.hero-bg-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 30% 50%, rgba(159, 213, 0, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(127, 184, 0, 0.06) 0%, transparent 50%);
+    animation: floatPattern 20s ease-in-out infinite;
+}
+
+@keyframes floatPattern {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
+}
+
+.hero-credentials {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-2xl);
+    flex-wrap: wrap;
+}
+
+.credential-badge {
+    background: rgba(159, 213, 0, 0.1);
+    border: var(--border-width) solid rgba(159, 213, 0, 0.3);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-3xl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-base);
+    color: var(--primary-color);
+    transition: all var(--transition-normal);
+}
+
+.credential-badge:hover {
+    background: rgba(159, 213, 0, 0.2);
+    transform: var(--hover-lift-sm);
+    box-shadow: var(--shadow-glow);
+}
+
+.credential-badge i {
+    font-size: var(--font-size-md);
+}
+
+/* ==================== Business Hero Shared Styles ==================== */
+.business-hero {
+    padding: var(--spacing-6xl) 0;
+    background: var(--bg-dark);
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.business-hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.business-icon-large {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-2xl);
+    opacity: 0.9;
+    transition: all var(--transition-normal);
+}
+
+.business-icon-large:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.business-hero-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-white);
+    margin-bottom: var(--spacing-lg);
+    line-height: var(--line-height-tight);
+}
+
+.business-hero-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xl);
+    font-weight: var(--font-weight-medium);
+}
+
+.business-hero-description {
+    font-size: var(--font-size-lg);
+    color: var(--text-light);
+    line-height: var(--line-height-relaxed);
+    max-width: 800px;
+    margin: 0 auto var(--spacing-2xl);
+}
+
+/* ==================== Hero Stats ==================== */
+.hero-stats {
+    display: flex;
+    gap: var(--spacing-2xl);
+    margin: var(--spacing-2xl) 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 120px;
+}
+
+.stat-number {
+    display: block;
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+    text-shadow: var(--shadow-glow);
+}
+
+.stat-label {
+    font-size: var(--font-size-base);
+    color: var(--text-light);
+    font-weight: var(--font-weight-medium);
+}
+
+/* ==================== Hero Achievements ==================== */
+.hero-achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-2xl);
+}
+
+.achievement-badge {
+    background: rgba(159, 213, 0, 0.1);
+    color: var(--primary-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    font-size: var(--font-size-sm);
+    border: var(--border-width) solid rgba(159, 213, 0, 0.3);
+    transition: all var(--transition-normal);
+}
+
+.achievement-badge:hover {
+    background: rgba(159, 213, 0, 0.2);
+    transform: var(--hover-lift-sm);
+}
+
+/* ==================== Services Overview ==================== */
+.services-overview {
+    padding: var(--section-padding);
+    background: var(--bg-darkest);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: var(--grid-auto-fit-lg);
+    gap: var(--grid-gap);
+    margin-top: var(--spacing-3xl);
+}
+
+.service-card {
+    /* Extends .card from components/cards.css */
+    background: var(--bg-card);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius-lg);
+    border: var(--border-width) solid rgba(159, 213, 0, 0.1);
+    transition: all var(--transition-normal);
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    border-color: var(--primary-color);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-md);
+}
+
+.service-card p {
+    color: var(--text-light);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.service-features li {
+    color: var(--text-gray);
+    padding: var(--spacing-xs) 0;
+    font-size: var(--font-size-sm);
+    padding-left: var(--spacing-lg);
+    position: relative;
+}
+
+.service-features li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+}
+
+/* ==================== Competencies Grid ==================== */
+.competencies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--grid-gap);
+    margin-top: var(--spacing-3xl);
+}
+
+.competency-card {
+    /* Similar to service-card but with different spacing */
+    background: var(--bg-card);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius-lg);
+    border: var(--border-width) solid rgba(159, 213, 0, 0.1);
+    transition: all var(--transition-normal);
+    text-align: center;
+}
+
+.competency-card:hover {
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    border-color: var(--primary-color);
+}
+
+.competency-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.competency-card h3 {
+    color: var(--text-white);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.competency-card p {
+    color: var(--text-light);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+}
+
+/* ==================== Core Competencies Section ==================== */
+.core-competencies {
+    padding: var(--section-padding);
+    background: var(--bg-darkest);
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    .business-hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .business-hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    .business-hero-description {
+        font-size: var(--font-size-md);
+    }
+    
+    .business-icon-large {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-stats {
+        gap: var(--spacing-lg);
+    }
+    
+    .stat-number {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .services-grid,
+    .competencies-grid {
+        grid-template-columns: 1fr;
+        gap: var(--grid-gap-sm);
+    }
+    
+    .hero-achievements {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-credentials {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-hero {
+        padding: var(--spacing-4xl) 0;
+    }
+    
+    .business-hero-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .business-hero-subtitle {
+        font-size: var(--font-size-md);
+    }
+    
+    .business-hero-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .business-icon-large {
+        font-size: 2.5rem;
+    }
+    
+    .stat-number {
+        font-size: var(--font-size-2xl);
+    }
+}

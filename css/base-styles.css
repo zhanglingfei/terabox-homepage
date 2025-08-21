@@ -1,61 +1,27 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ==================== Base Styles - Legacy Support ==================== */
+/* This file is maintained for backward compatibility */
+/* Core styles are now handled by css/core/ files */
+
+/* Additional base styles not covered by core */
+.legacy-support {
+    /* Placeholder for any legacy-specific styles */
 }
 
-body {
-    font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', sans-serif;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
-    color: #ffffff;
-    overflow-x: hidden;
-    line-height: 1.7;
-}
-
-/* Common Classes */
+/* Common classes moved to core/utilities.css and core/typography.css */
+/* Keeping aliases for backward compatibility */
 .container {
-    max-width: 1200px;
+    /* Now uses CSS variables from core/variables.css */
+    max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--container-padding);
 }
 
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    color: #9FD500;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 20px;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #9FD500;
-}
-
-.section-subtitle {
-    text-align: center;
-    color: #cccccc;
-    margin-bottom: 50px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 18px;
-}
-
-/* Common Animation Classes */
+/* Animation classes moved to core/utilities.css */
+/* Aliases maintained for compatibility */
 .scroll-animate {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s ease;
+    transition: all var(--transition-slow);
 }
 
 .scroll-animate.visible {
@@ -63,62 +29,31 @@ body {
     transform: translateY(0);
 }
 
-.animate {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s forwards;
-}
-
-.animate-delay-1 {
-    animation-delay: 0.2s;
-}
-
-.animate-delay-2 {
-    animation-delay: 0.4s;
-}
-
-.animate-delay-3 {
-    animation-delay: 0.6s;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Common Button Styles */
+/* Button styles moved to components/buttons.css */
+/* Legacy alias maintained */
 .cta-button {
-    background: linear-gradient(45deg, #9FD500, #7FB800);
+    /* Inherits from .btn--primary in components/buttons.css */
+    background: var(--gradient-primary);
     color: #000000;
     padding: 15px 30px;
     border: none;
-    border-radius: 4px;
-    font-size: 24px;
-    font-weight: bold;
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all var(--transition-normal);
     text-decoration: none;
     display: inline-block;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(159, 213, 0, 0.2);
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
-/* Responsive Base */
+/* Responsive styles moved to respective component files */
 @media (max-width: 768px) {
     .container {
-        padding: 0 15px;
-    }
-    
-    .section-title {
-        font-size: 28px;
-    }
-    
-    .section-subtitle {
-        font-size: 16px;
+        padding: 0 var(--container-padding-sm);
     }
 }
