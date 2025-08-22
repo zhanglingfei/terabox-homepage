@@ -12,20 +12,26 @@
    <link rel="stylesheet" href="css/business-styles.css">
    <link rel="stylesheet" href="css/recruit-forms-styles.css">
    <style>
-       /* Navigation Menu Spacing Enhancement */
-       .nav-links {
-           gap: 45px; /* Increased from 30px */
+       /* Navigation Menu Spacing Enhancement for Index Page */
+       body .nav-links {
+           gap: 40px !important; /* Main page spacing */
        }
        
-       .nav-links a {
-           font-size: 17px; /* Slightly increased */
-           padding: 10px 5px; /* Added horizontal padding */
-           white-space: nowrap; /* Prevent text wrapping */
+       body .nav-links a {
+           font-size: 16px !important; /* Unified font size */
+           padding: 10px 5px !important; /* Added horizontal padding */
+           white-space: nowrap !important; /* Prevent text wrapping */
+       }
+
+       /* Logo spacing for main page */
+       body .logo {
+           margin-right: 72px !important;
        }
        
        /* Adjust header for wider navigation */
        .header {
-           padding: 18px 0;
+           padding: 25px 0;
+           margin-bottom: 40px;
        }
        
        .nav {
@@ -70,6 +76,34 @@
            min-height: 420px;
        }
        
+       /* Case Studies Section Image Enhancement */
+       .news-section .news-image {
+           position: relative;
+           overflow: hidden;
+           border-radius: 8px;
+           transition: all 0.3s ease;
+       }
+       
+       .news-section .news-image::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+           z-index: 1;
+           transition: all 0.3s ease;
+       }
+       
+       .news-card:hover .news-image::before {
+           background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.05) 100%);
+       }
+       
+       .news-card:hover .news-image {
+           transform: scale(1.05);
+       }
+       
        /* Business News Section Specific Styles */
        .news-date {
            color: #999;
@@ -110,12 +144,16 @@
            z-index: 2;
        }
        
+       /* Responsive navigation for index page */
        @media (max-width: 1024px) {
-           .nav-links {
-               gap: 25px;
+           body .nav-links {
+               gap: 30px !important;
            }
-           .nav-links a {
-               font-size: 15px;
+           body .nav-links a {
+               font-size: 15px !important;
+           }
+           body .logo {
+               margin-right: 54px !important;
            }
        }
        
@@ -126,12 +164,15 @@
            .stat-number {
                font-size: 28px;
            }
-           .nav-links {
-               gap: 15px;
+           body .nav-links {
+               gap: 18px !important;
            }
-           .nav-links a {
-               font-size: 14px;
-               padding: 8px 0;
+           body .nav-links a {
+               font-size: 14px !important;
+               padding: 8px 0 !important;
+           }
+           body .logo {
+               margin-right: 36px !important;
            }
        }
 	   
@@ -264,6 +305,67 @@
         font-size: 16px;
     }
 }
+
+/* Google Maps Styling */
+.map-container {
+    height: 600px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(159, 213, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.google-map {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.map-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+    color: #9FD500;
+}
+
+.map-loading i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    animation: pulse 2s infinite;
+}
+
+.loading-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Responsive map adjustments */
+@media (max-width: 768px) {
+    .map-container {
+        height: 450px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        height: 375px;
+    }
+    
+    .map-loading i {
+        font-size: 36px;
+    }
+}
 	   
 	   
    </style>
@@ -317,15 +419,15 @@
                <div class="hero-stats animate animate-delay-3">
                    <div class="stat-item">
                        <span class="stat-number">25+</span>
-                       <span class="stat-label">専門エンジニア</span>
+                       <span class="stat-label" data-lang-key="hero-stat-engineers">専門エンジニア</span>
                    </div>
                    <div class="stat-item">
                        <span class="stat-number">20+</span>
-                       <span class="stat-label">年間サービス企業</span>
+                       <span class="stat-label" data-lang-key="hero-stat-companies">年間サービス企業</span>
                    </div>
                    <div class="stat-item">
                        <span class="stat-number">7年</span>
-                       <span class="stat-label">平均業界経験</span>
+                       <span class="stat-label" data-lang-key="hero-stat-experience">平均業界経験</span>
                    </div>
                </div>
                
@@ -362,7 +464,7 @@
            <p class="section-subtitle scroll-animate" data-lang-key="strength-subtitle">Our Competitive Advantages</p>
            <div class="news-grid">
                <div class="news-card scroll-animate">
-                   <div class="news-image"><i class="fas fa-users-cog"></i></div>
+                   <div class="news-image" style="background-image: url('images/strength1-team.jpg'); background-size: cover; background-position: center;"></div>
                    <div class="news-content">
                        <div class="news-title" data-lang-key="strength-team-title">多国籍精鋭チーム</div>
                        <p class="news-text" data-lang-key="strength-team-text">日本人エンジニアと外国籍エンジニアが協働。官公庁・自治体案件でのプリセールス・提案・要件定義・入札支援等の豊富な実績。グローバルな知見と日本国内公共/民間領域への対応力を両立。</p>
@@ -370,7 +472,7 @@
                </div>
                
                <div class="news-card scroll-animate">
-                   <div class="news-image"><i class="fas fa-project-diagram"></i></div>
+                   <div class="news-image" style="background-image: url('images/strengt2-e2e.jpg'); background-size: cover; background-position: center;"></div>
                    <div class="news-content">
                        <div class="news-title" data-lang-key="strength-service-title">エンドツーエンドサービス</div>
                        <p class="news-text" data-lang-key="strength-service-text">RFP（提案依頼書）・要件定義など上流工程から、技術選定・見積・課題整理・設計～運用まで一貫対応。上流工程経験豊富なPM/PLと最適なチームが高品質プロジェクトを推進。</p>
@@ -378,7 +480,7 @@
                </div>
                
                <div class="news-card scroll-animate">
-                   <div class="news-image"><i class="fas fa-industry"></i></div>
+                   <div class="news-image" style="background-image: url('images/strength3-richexperience.jpg'); background-size: cover; background-position: center;"></div>
                    <div class="news-content">
                        <div class="news-title" data-lang-key="strength-experience-title">豊富な業界経験</div>
                        <p class="news-text" data-lang-key="strength-experience-text">金融（メガバンク）、医療、物流、製造業など多業界での実績。特に金融・保険業界の経験者が多数在籍していることから、セキュリティに対する高い意識と豊富な知識を保有。</p>
@@ -395,48 +497,48 @@
            <p class="section-subtitle scroll-animate" data-lang-key="business-news-subtitle">Latest Business Updates</p>
            <div class="news-grid">
                <div class="news-card scroll-animate">
-                   <span class="news-badge">NEW</span>
-                   <div class="news-image" style="background: linear-gradient(135deg, #1a4a4a, #2a5a5a);">
-                       <i class="fas fa-rocket"></i>
+                   <span class="news-badge" data-lang-key="news-badge-new">NEW</span>
+                   <div class="news-image" style="background: linear-gradient(135deg, #1a4a4a, #2a5a5a); background-image: url('images/dashouAImukei.png'); background-size: cover; background-position: center;">
+                       <i class="fas fa-rocket" style="display: none;"></i>
                    </div>
                    <div class="news-content">
                        <div class="news-date">
                            <i class="fas fa-calendar-alt"></i>
-                           2025年1月15日
-                           <span class="news-category">プレスリリース</span>
+                           <span data-lang-key="news-date-1">2025年1月15日</span>
+                           <span class="news-category" data-lang-key="news-category-press">プレスリリース</span>
                        </div>
-                       <div class="news-title">大手製造業向けAI品質検査システムを納入</div>
-                       <p class="news-text">当社が開発したAIベースの品質検査システムが、国内大手製造業に採用されました。深層学習技術を活用し、不良品検出率を99.8%まで向上させ、検査時間を従来の1/3に短縮することに成功しました。今後も製造業のDX推進に貢献してまいります。</p>
+                       <div class="news-title" data-lang-key="news-title-1">大手製造業向けAI品質検査システムを納入</div>
+                       <p class="news-text" data-lang-key="news-text-1">当社が開発したAIベースの品質検査システムが、国内大手製造業に採用されました。深層学習技術を活用し、不良品検出率を99.8%まで向上させ、検査時間を従来の1/3に短縮することに成功しました。今後も製造業のDX推進に貢献してまいります。</p>
                    </div>
                </div>
                
                <div class="news-card scroll-animate">
-                   <div class="news-image" style="background: linear-gradient(135deg, #4a1a4a, #5a2a5a);">
-                       <i class="fas fa-award"></i>
+                   <div class="news-image" style="background: linear-gradient(135deg, #4a1a4a, #5a2a5a); background-image: url('images/google-certified.png'); background-size: cover; background-position: center;">
+                       <i class="fas fa-award" style="display: none;"></i>
                    </div>
                    <div class="news-content">
                        <div class="news-date">
                            <i class="fas fa-calendar-alt"></i>
-                           2025年1月10日
-                           <span class="news-category">受賞情報</span>
+                           <span data-lang-key="news-date-2">2025年1月10日</span>
+                           <span class="news-category" data-lang-key="news-category-award">受賞情報</span>
                        </div>
-                       <div class="news-title">Google Cloud Partner認定を取得</div>
-                       <p class="news-text">この度、当社はGoogle Cloud Partnerとして正式に認定されました。これまでのクラウド移行実績と技術力が評価されての認定となります。今後はGoogle Cloudの最新技術を活用し、お客様により高度なクラウドソリューションを提供してまいります。</p>
+                       <div class="news-title" data-lang-key="news-title-2">Google Cloud Partner認定を取得</div>
+                       <p class="news-text" data-lang-key="news-text-2">この度、当社はGoogle Cloud Partnerとして正式に認定されました。これまでのクラウド移行実績と技術力が評価されての認定となります。今後はGoogle Cloudの最新技術を活用し、お客様により高度なクラウドソリューションを提供してまいります。</p>
                    </div>
                </div>
                
                <div class="news-card scroll-animate">
-                   <div class="news-image" style="background: linear-gradient(135deg, #4a4a1a, #5a5a2a);">
-                       <i class="fas fa-handshake"></i>
+                   <div class="news-image" style="background: linear-gradient(135deg, #4a4a1a, #5a5a2a); background-image: url('images/microsoft.png'); background-size: cover; background-position: center;">
+                       <i class="fas fa-handshake" style="display: none;"></i>
                    </div>
                    <div class="news-content">
                        <div class="news-date">
                            <i class="fas fa-calendar-alt"></i>
-                           2025年1月5日
-                           <span class="news-category">パートナーシップ</span>
+                           <span data-lang-key="news-date-3">2025年1月5日</span>
+                           <span class="news-category" data-lang-key="news-category-partnership">パートナーシップ</span>
                        </div>
-                       <div class="news-title">Microsoft社との戦略的パートナーシップを締結</div>
-                       <p class="news-text">Microsoft Dynamics 365の導入支援において、Microsoft社と戦略的パートナーシップを締結しました。これにより、エンタープライズ向けERPソリューションの提供能力が大幅に強化され、より包括的なデジタルトランスフォーメーションを支援できるようになります。</p>
+                       <div class="news-title" data-lang-key="news-title-3">Microsoft社との戦略的パートナーシップを締結</div>
+                       <p class="news-text" data-lang-key="news-text-3">Microsoft Dynamics 365の導入支援において、Microsoft社と戦略的パートナーシップを締結しました。これにより、エンタープライズ向けERPソリューションの提供能力が大幅に強化され、より包括的なデジタルトランスフォーメーションを支援できるようになります。</p>
                    </div>
                </div>
            </div>
@@ -469,10 +571,7 @@
            <div class="company-info scroll-animate" id="headquarters-info">
                <div class="company-header">
                    <h3 class="company-subtitle" data-lang-key="company-headquarters-title">テラボックス株式会社</h3>
-                   <div class="company-qr">
-                       <img src="images/qr-code.png" alt="QR Code" class="qr-code">
-                       <span class="qr-url">https://terabox.jp</span>
-                   </div>
+                 
                </div>
                
                <div class="company-grid">
@@ -498,7 +597,7 @@
                    </div>
                    <div class="company-item">
                        <div class="company-label" data-lang-key="company-ceo-label">代表者</div>
-                       <div class="company-value" data-lang-key="company-ceo-value">花　威</div>
+                       <div class="company-value" data-lang-key="company-ceo-value">荆　威</div>
                    </div>
                    <div class="company-item">
                        <div class="company-label" data-lang-key="company-email-label">E-mail</div>
@@ -546,7 +645,7 @@
                    </div>
                    <div class="company-item">
                        <div class="company-label">代表者</div>
-                       <div class="company-value">花　威</div>
+                       <div class="company-value">荆　威</div>
                    </div>
                    <div class="company-item">
                        <div class="company-label">事業内容</div>
@@ -565,10 +664,10 @@
            <div class="message-layout">
                <div class="ceo-info scroll-animate">
                    <div class="ceo-photo">
-                       <img src="images/president-photo.jpg" alt="花威" class="ceo-image">
+                       <img src="images/president-photo.jpg" alt="荆威" class="ceo-image">
                    </div>
                    <div class="ceo-details">
-                       <div class="ceo-name" data-lang-key="ceo-name">花　威</div>
+                       <div class="ceo-name" data-lang-key="ceo-name">荆　威</div>
                        <div class="ceo-title" data-lang-key="ceo-title">代表取締役</div>
                    </div>
                </div>
@@ -592,7 +691,7 @@
                        <div class="message-signature">
                            <p class="signature-closing" data-lang-key="message-closing">敬具</p>
                            <p data-lang-key="message-company">テラボックス株式会社</p>
-                           <p class="signature-name" data-lang-key="message-signature">代表取締役　花威</p>
+                           <p class="signature-name" data-lang-key="message-signature">代表取締役　荆威</p>
                        </div>
                    </div>
                </div>
@@ -608,7 +707,7 @@
            
            <div class="business-cards">
                <!-- システムエンジニアリング事業 -->
-               <div class="business-card scroll-animate">
+               <div class="business-card scroll-animate" onclick="window.location.href='engineering-service.html'" style="cursor: pointer;">
                    <div class="business-icon"><i class="fas fa-code"></i></div>
                    <h3 data-lang-key="business-engineering-title">システムエンジニアリング事業</h3>
                    <p data-lang-key="business-engineering-text">25名以上の多国籍エンジニアチーム、平均業界経験7年以上のプロフェッショナル集団</p>
@@ -625,7 +724,7 @@
                </div>
                
                <!-- AI・DXソリューション事業 -->
-               <div class="business-card scroll-animate">
+               <div class="business-card scroll-animate" onclick="window.location.href='ai-solution.html'" style="cursor: pointer;">
                    <div class="business-icon"><i class="fas fa-brain"></i></div>
                    <h3 data-lang-key="business-ai-title">AI・DXソリューション事業</h3>
                    <p data-lang-key="business-ai-text">RFPから運用まで一站式AI/DXソリューション提供</p>
@@ -642,7 +741,7 @@
                </div>
                
                <!-- スマート機器・IoT事業 -->
-               <div class="business-card scroll-animate">
+               <div class="business-card scroll-animate" onclick="window.location.href='iot-systems.html'" style="cursor: pointer;">
                    <div class="business-icon"><i class="fas fa-robot"></i></div>
                    <h3 data-lang-key="business-iot-title">スマート機器・IoT事業</h3>
                    <p data-lang-key="business-iot-text">サービスロボット日本初導入のパイオニア</p>
@@ -659,7 +758,7 @@
                </div>
                
                <!-- IT人材サービス事業 -->
-               <div class="business-card scroll-animate">
+               <div class="business-card scroll-animate" onclick="window.location.href='human-resource.html'" style="cursor: pointer;">
                    <div class="business-icon"><i class="fas fa-users"></i></div>
                    <h3 data-lang-key="business-hr-title">IT人材サービス事業</h3>
                    <p data-lang-key="business-hr-text">総合的な人材ソリューション提供</p>
@@ -675,35 +774,37 @@
                    </div>
                </div>
                
-               <!-- Engineering Base -->
-               <div class="business-card scroll-animate">
-                   <div class="business-icon"><i class="fas fa-cogs"></i></div>
-                   <h3 data-lang-key="business-eb-title">Engineering Base</h3>
-                   <p data-lang-key="business-eb-text">統合型エンジニアリング設計プラットフォーム</p>
+               <!-- Blockchain & Web3事業 -->
+               <div class="business-card scroll-animate" onclick="window.location.href='blockchain-web3.html'" style="cursor: pointer;">
+                   <div class="business-icon"><i class="fas fa-link"></i></div>
+                   <h3 data-lang-key="business-blockchain-title">Blockchain & Web3事業</h3>
+                   <p data-lang-key="business-blockchain-text">次世代Web3技術とブロックチェーンソリューションの開発・導入</p>
                    <div class="business-services">
-                       <span>プロセス制御</span>
-                       <span>電気エンジニアリング</span>
-                       <span>自動化設計</span>
-                       <span>AUCOTEC Partner</span>
+                       <span>Ethereum/Solidity開発</span>
+                       <span>Hyperledger Fabric</span>
+                       <span>DeFiプロトコル</span>
+                       <span>Cosmos/Tendermint</span>
                    </div>
                    <div class="achievement-tags">
-                       <span class="tag">グローバル企業実績</span>
+                       <span class="tag">9年以上の実績</span>
+                       <span class="tag">国際ハッカソン受賞</span>
                    </div>
                </div>
                
-               <!-- Microsoft Dynamics 365 -->
-               <div class="business-card scroll-animate">
+               <!-- エンタープライズソリューション事業 -->
+               <div class="business-card scroll-animate" onclick="window.location.href='enterprise-solution.html'" style="cursor: pointer;">
                    <div class="business-icon"><i class="fas fa-building"></i></div>
-                   <h3 data-lang-key="business-d365-title">Microsoft Dynamics 365</h3>
-                   <p data-lang-key="business-d365-text">企業資源管理プラットフォーム</p>
+                   <h3 data-lang-key="business-enterprise-title">エンタープライズソリューション事業</h3>
+                   <p data-lang-key="business-enterprise-text">企業のデジタル変革を支援する総合ソリューション</p>
                    <div class="business-services">
-                       <span>CRM/ERP統合</span>
-                       <span>Power Platform</span>
-                       <span>カスタマイズ開発</span>
-                       <span>Microsoft Partner</span>
+                       <span>Microsoft Dynamics 365</span>
+                       <span>ローコードプラットフォーム</span>
+                       <span>勤怠管理システム</span>
+                       <span>データ分析・BI</span>
                    </div>
                    <div class="achievement-tags">
                        <span class="tag">エンタープライズ対応</span>
+                       <span class="tag">Microsoft Partner</span>
                    </div>
                </div>
            </div>
@@ -718,26 +819,32 @@
            
            <div class="news-grid">
                <div class="news-card scroll-animate">
-                   <div class="news-image"><i class="fas fa-university"></i></div>
+                   <div class="news-image" style="background-image: url('images/aws-infra.jpg'); background-size: cover; background-position: center;">
+                       <i class="fas fa-university" style="display: none;"></i>
+                   </div>
                    <div class="news-content">
-                       <div class="news-title">某メガバンク - AWS共通基盤構築</div>
-                       <p class="news-text">次期基盤構築・運用保守プロジェクト。延べ100+人月、継続中。24/7運用体制を構築し、高可用性とセキュリティを実現。</p>
+                       <div class="news-title" data-lang-key="case-megabank-title">某メガバンク - AWS共通基盤構築</div>
+                       <p class="news-text" data-lang-key="case-megabank-text">次期基盤構築・運用保守プロジェクト。延べ100+人月、継続中。24/7運用体制を構築し、高可用性とセキュリティを実現。</p>
                    </div>
                </div>
                
                <div class="news-card scroll-animate">
-                   <div class="news-image"><i class="fas fa-hospital"></i></div>
+                   <div class="news-image" style="background-image: url('images/listed-bigdata.jpg'); background-size: cover; background-position: center;">
+                       <i class="fas fa-hospital" style="display: none;"></i>
+                   </div>
                    <div class="news-content">
-                       <div class="news-title">上場医療データ専門会社 - ビッグデータ基盤</div>
-                       <p class="news-text">ビッグデータ分析を含め、データ基盤構築・運用保守。延べ100+人月、継続中。AI/MLを活用した高度な分析環境を提供。</p>
+                       <div class="news-title" data-lang-key="case-medical-title">上場医療データ専門会社 - ビッグデータ基盤</div>
+                       <p class="news-text" data-lang-key="case-medical-text">ビッグデータ分析を含め、データ基盤構築・運用保守。延べ100+人月、継続中。AI/MLを活用した高度な分析環境を提供。</p>
                    </div>
                </div>
                
                <div class="news-card scroll-animate">
-                   <div class="news-image"><i class="fas fa-robot"></i></div>
+                   <div class="news-image" style="background-image: url('images/pensioner-robot.jpg'); background-size: cover; background-position: center;">
+                       <i class="fas fa-robot" style="display: none;"></i>
+                   </div>
                    <div class="news-content">
-                       <div class="news-title">介護施設 - 日本初サービスロボット導入</div>
-                       <p class="news-text">配膳・清掃ロボットの日本初導入を実現。85%の利用者が負担軽減を実感。作業時間を25%～70%削減に成功。</p>
+                       <div class="news-title" data-lang-key="case-nursing-title">介護施設 - 日本初サービスロボット導入</div>
+                       <p class="news-text" data-lang-key="case-nursing-text">配膳・清掃ロボットの日本初導入を実現。85%の利用者が負担軽減を実感。作業時間を25%～70%削減に成功。</p>
                    </div>
                </div>
            </div>
@@ -839,69 +946,69 @@
                <h3 class="recruit-subtitle" data-lang-key="recruit-positions-title">中途採用職種</h3>
                <div class="positions-grid">
                    <div class="position-card">
-                       <h4 class="position-title">AIエンジニア</h4>
+                       <h4 class="position-title" data-lang-key="position-ai-title">AIエンジニア</h4>
                        <div class="position-description">
-                           <p>機械学習モデルの開発・改善、データパイプライン構築、AIプロダクトの実装に従事していただきます。最新の技術トレンドを追いながら、革新的なソリューション開発に携わることができます。</p>
+                           <p data-lang-key="position-ai-description">機械学習モデルの開発・改善、データパイプライン構築、AIプロダクトの実装に従事していただきます。最新の技術トレンドを追いながら、革新的なソリューション開発に携わることができます。</p>
                        </div>
                        <div class="required-skills">
-                           <strong>必要スキル:</strong> Python, TensorFlow/PyTorch, 機械学習の基礎知識
+                           <strong data-lang-key="position-skills-label">必要スキル:</strong> <span data-lang-key="position-ai-skills">Python, TensorFlow/PyTorch, 機械学習の基礎知識</span>
                        </div>
-                       <button class="apply-btn">応募する</button>
+                       <button class="apply-btn" data-lang-key="position-apply-btn">応募する</button>
                    </div>
 
                    <div class="position-card">
-                       <h4 class="position-title">フルスタックエンジニア</h4>
+                       <h4 class="position-title" data-lang-key="position-fullstack-title">フルスタックエンジニア</h4>
                        <div class="position-description">
-                           <p>フロントエンドからバックエンドまで、システム全体の設計・開発に携わります。モダンな技術スタックを使用した開発環境で、技術力を存分に発揮できます。</p>
+                           <p data-lang-key="position-fullstack-description">フロントエンドからバックエンドまで、システム全体の設計・開発に携わります。モダンな技術スタックを使用した開発環境で、技術力を存分に発揮できます。</p>
                        </div>
                        <div class="required-skills">
-                           <strong>必要スキル:</strong> JavaScript, React, Node.js, クラウドサービス
+                           <strong data-lang-key="position-skills-label">必要スキル:</strong> <span data-lang-key="position-fullstack-skills">JavaScript, React, Node.js, クラウドサービス</span>
                        </div>
-                       <button class="apply-btn">応募する</button>
+                       <button class="apply-btn" data-lang-key="position-apply-btn">応募する</button>
                    </div>
 
                    <div class="position-card">
-                       <h4 class="position-title">クラウドアーキテクト</h4>
+                       <h4 class="position-title" data-lang-key="position-cloud-title">クラウドアーキテクト</h4>
                        <div class="position-description">
-                           <p>企業のクラウド移行戦略立案、アーキテクチャ設計、インフラ構築を担当します。スケーラブルで安全なクラウドソリューションの提供を通じて、お客様のDXを推進します。</p>
+                           <p data-lang-key="position-cloud-description">企業のクラウド移行戦略立案、アーキテクチャ設計、インフラ構築を担当します。スケーラブルで安全なクラウドソリューションの提供を通じて、お客様のDXを推進します。</p>
                        </div>
                        <div class="required-skills">
-                           <strong>必要スキル:</strong> AWS/Azure/GCP, Kubernetes, Infrastructure as Code
+                           <strong data-lang-key="position-skills-label">必要スキル:</strong> <span data-lang-key="position-cloud-skills">AWS/Azure/GCP, Kubernetes, Infrastructure as Code</span>
                        </div>
-                       <button class="apply-btn">応募する</button>
+                       <button class="apply-btn" data-lang-key="position-apply-btn">応募する</button>
                    </div>
 
                    <div class="position-card">
-                       <h4 class="position-title">プロダクトマネージャー</h4>
+                       <h4 class="position-title" data-lang-key="position-pm-title">プロダクトマネージャー</h4>
                        <div class="position-description">
-                           <p>AIプロダクトの企画・開発・運用を統括し、市場ニーズを技術要件に落とし込みます。エンジニアリングチームと密接に連携し、革新的なプロダクトの創出をリードします。</p>
+                           <p data-lang-key="position-pm-description">AIプロダクトの企画・開発・運用を統括し、市場ニーズを技術要件に落とし込みます。エンジニアリングチームと密接に連携し、革新的なプロダクトの創出をリードします。</p>
                        </div>
                        <div class="required-skills">
-                           <strong>必要スキル:</strong> プロダクト企画経験, 技術理解力, プロジェクト管理
+                           <strong data-lang-key="position-skills-label">必要スキル:</strong> <span data-lang-key="position-pm-skills">プロダクト企画経験, 技術理解力, プロジェクト管理</span>
                        </div>
-                       <button class="apply-btn">応募する</button>
+                       <button class="apply-btn" data-lang-key="position-apply-btn">応募する</button>
                    </div>
 
                    <div class="position-card">
-                       <h4 class="position-title">DevOpsエンジニア</h4>
+                       <h4 class="position-title" data-lang-key="position-devops-title">DevOpsエンジニア</h4>
                        <div class="position-description">
-                           <p>CI/CDパイプラインの構築、インフラの自動化、監視システムの導入を通じて、開発プロセスの効率化と品質向上を実現します。</p>
+                           <p data-lang-key="position-devops-description">CI/CDパイプラインの構築、インフラの自動化、監視システムの導入を通じて、開発プロセスの効率化と品質向上を実現します。</p>
                        </div>
                        <div class="required-skills">
-                           <strong>必要スキル:</strong> Docker, Kubernetes, CI/CD, 監視ツール
+                           <strong data-lang-key="position-skills-label">必要スキル:</strong> <span data-lang-key="position-devops-skills">Docker, Kubernetes, CI/CD, 監視ツール</span>
                        </div>
-                       <button class="apply-btn">応募する</button>
+                       <button class="apply-btn" data-lang-key="position-apply-btn">応募する</button>
                    </div>
 
                    <div class="position-card">
-                       <h4 class="position-title">データサイエンティスト</h4>
+                       <h4 class="position-title" data-lang-key="position-ds-title">データサイエンティスト</h4>
                        <div class="position-description">
-                           <p>大規模データの分析、統計モデリング、ビジネス課題解決のための洞察抽出を行います。データから価値を創出し、意思決定を支援する重要な役割です。</p>
+                           <p data-lang-key="position-ds-description">大規模データの分析、統計モデリング、ビジネス課題解決のための洞察抽出を行います。データから価値を創出し、意思決定を支援する重要な役割です。</p>
                        </div>
                        <div class="required-skills">
-                           <strong>必要スキル:</strong> R/Python, SQL, 統計学の知識
+                           <strong data-lang-key="position-skills-label">必要スキル:</strong> <span data-lang-key="position-ds-skills">R/Python, SQL, 統計学の知識</span>
                        </div>
-                       <button class="apply-btn">応募する</button>
+                       <button class="apply-btn" data-lang-key="position-apply-btn">応募する</button>
                    </div>
                </div>
            </div>
@@ -1005,8 +1112,14 @@
                        </div>
                    </div>
                </div>
-               <div class="map-placeholder scroll-animate">
-                   <div class="map-text"><i class="fas fa-map-marker-alt"></i> <span data-lang-key="access-map-text">Google Maps</span></div>
+               <div class="map-container scroll-animate">
+                   <div id="google-map" class="google-map">
+                       <div class="map-loading">
+                           <i class="fas fa-map-marker-alt"></i>
+                           <span data-lang-key="access-map-text">Google Maps</span>
+                           <div class="loading-text">Loading map...</div>
+                       </div>
+                   </div>
                </div>
            </div>
        </div>
@@ -1049,5 +1162,103 @@
    <!-- JavaScript Files -->
    <script src="js/language-switcher.js"></script>
    <script src="js/script.js"></script>
+   
+   <!-- Google Maps API -->
+   <script>
+   // Google Maps initialization
+   function initMap() {
+       // TERABOX company coordinates (Tsukiji, Tokyo)
+       const teraboxLocation = { lat: 35.6695, lng: 139.7714 };
+       
+       const map = new google.maps.Map(document.getElementById("google-map"), {
+           zoom: 16,
+           center: teraboxLocation,
+           styles: [
+               {
+                   featureType: "all",
+                   elementType: "geometry.fill",
+                   stylers: [{ color: "#1a1a1a" }]
+               },
+               {
+                   featureType: "all",
+                   elementType: "labels.text.fill",
+                   stylers: [{ color: "#ffffff" }]
+               },
+               {
+                   featureType: "all",
+                   elementType: "labels.text.stroke",
+                   stylers: [{ color: "#000000" }, { lightness: 13 }]
+               },
+               {
+                   featureType: "road",
+                   elementType: "geometry.fill",
+                   stylers: [{ color: "#2a2a2a" }]
+               },
+               {
+                   featureType: "water",
+                   elementType: "geometry",
+                   stylers: [{ color: "#0d47a1" }]
+               }
+           ]
+       });
+
+       // Custom marker icon with TERABOX branding
+       const markerIcon = {
+           path: google.maps.SymbolPath.CIRCLE,
+           scale: 12,
+           fillColor: '#9FD500',
+           fillOpacity: 1,
+           strokeColor: '#7FB800',
+           strokeWeight: 2
+       };
+
+       // Create marker
+       const marker = new google.maps.Marker({
+           position: teraboxLocation,
+           map: map,
+           icon: markerIcon,
+           title: 'TERABOX株式会社',
+           animation: google.maps.Animation.DROP
+       });
+
+       // Info window content
+       const infoWindow = new google.maps.InfoWindow({
+           content: `
+               <div style="padding: 10px; color: #333; font-family: 'Noto Sans JP', sans-serif;">
+                   <h3 style="margin: 0 0 8px 0; color: #333; font-size: 16px;">テラボックス株式会社</h3>
+                   <p style="margin: 5px 0; font-size: 13px;">〒104-0045</p>
+                   <p style="margin: 5px 0; font-size: 13px;">東京都中央区築地6丁目17-4</p>
+                   <p style="margin: 5px 0; font-size: 13px;">リードシー築地ビル 4F</p>
+                   <p style="margin: 5px 0; font-size: 13px; color: #9FD500; font-weight: bold;">TEL: 03-5542-7798</p>
+               </div>
+           `
+       });
+
+       // Show info window on marker click
+       marker.addListener('click', () => {
+           infoWindow.open(map, marker);
+       });
+
+       // Auto-open info window after 1 second
+       setTimeout(() => {
+           infoWindow.open(map, marker);
+       }, 1000);
+
+       // Hide loading indicator
+       document.querySelector('.map-loading').style.display = 'none';
+   }
+
+   // Error handling for map loading
+   function mapError() {
+       console.error('Google Maps failed to load');
+       document.querySelector('.map-loading .loading-text').textContent = 'Map failed to load. Please check your connection.';
+   }
+   </script>
+   
+   <!-- Load Google Maps API - Replace YOUR_API_KEY with actual API key -->
+   <script async defer
+       src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&language=ja"
+       onerror="mapError()">
+   </script>
 </body>
 </html>

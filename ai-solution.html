@@ -13,14 +13,18 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <a href="index.html" class="logo">TERABOX</a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Terabox Logo" class="logo-icon">
+                TERABOX
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html#news" data-lang-key="nav-news">お知らせ</a></li>
+                <li><a href="index.html#strength" data-lang-key="nav-strength">当社の強み</a></li>
+                <li><a href="index.html#business-news" data-lang-key="nav-business-news">業務新聞</a></li>
                 <li><a href="index.html#company" data-lang-key="nav-company">会社概要</a></li>
                 <li><a href="index.html#message" data-lang-key="nav-message">代表挨拶</a></li>
                 <li><a href="index.html#business" data-lang-key="nav-business">事業内容</a></li>
+                <li><a href="index.html#cases" data-lang-key="nav-cases">導入実績</a></li>
                 <li><a href="index.html#recruit" data-lang-key="nav-recruit">採用情報</a></li>
-                <li><a href="index.html#access" data-lang-key="nav-access">アクセス</a></li>
                 <li><a href="index.html#contact" data-lang-key="nav-contact">お問い合わせ</a></li>
             </ul>
             <div class="language-switcher">
@@ -46,10 +50,10 @@
                     <i class="fas fa-brain"></i>
                     <div class="ai-orbit"></div>
                 </div>
-                <h1 class="business-hero-title">AIソリューション事業</h1>
-                <p class="business-hero-subtitle">Next-Generation AI Technology Solutions</p>
-                <p class="business-hero-description">
-                    25名以上の多国籍AIエンジニアチーム | 平均7年以上の業界経験<br>
+                <h1 class="business-hero-title" data-lang-key="ai-title">AIソリューション事業</h1>
+                <p class="business-hero-subtitle" data-lang-key="ai-subtitle">Next-Generation AI Technology Solutions</p>
+                <p class="business-hero-description" data-lang-key="ai-description">
+                    75名以上の多国籍AIエンジニアチーム | 平均7年以上の業界経験<br>
                     LLM・Deep Learning・自動運転・画像認識の最先端技術で<br>
                     お客様のビジネス課題を革新的に解決します
                 </p>
@@ -509,5 +513,6 @@
     </footer>
 
     <script src="ai-solution.js"></script>
+    <script src="js/language-switcher.js"></script>
 </body>
 </html>

@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>エンジニアリング事業 - TERABOX</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="business-pages.css">
+    <link rel="stylesheet" href="styles.css">         <!-- 基础样式 -->
+    <link rel="stylesheet" href="business-pages.css"> <!-- 业务页面通用样式 -->
+    <link rel="stylesheet" href="engineering-service.css"> <!-- 工程服务页面专用样式 -->
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <a href="index.html" class="logo">TERABOX</a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Terabox Logo" class="logo-icon">
+                TERABOX
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html#news" data-lang-key="nav-news">お知らせ</a></li>
+                <li><a href="index.html#strength" data-lang-key="nav-strength">当社の強み</a></li>
+                <li><a href="index.html#business-news" data-lang-key="nav-business-news">業務新聞</a></li>
                 <li><a href="index.html#company" data-lang-key="nav-company">会社概要</a></li>
                 <li><a href="index.html#message" data-lang-key="nav-message">代表挨拶</a></li>
                 <li><a href="index.html#business" data-lang-key="nav-business">事業内容</a></li>
+                <li><a href="index.html#cases" data-lang-key="nav-cases">導入実績</a></li>
                 <li><a href="index.html#recruit" data-lang-key="nav-recruit">採用情報</a></li>
-                <li><a href="index.html#access" data-lang-key="nav-access">アクセス</a></li>
                 <li><a href="index.html#contact" data-lang-key="nav-contact">お問い合わせ</a></li>
             </ul>
             <div class="language-switcher">
@@ -36,18 +41,36 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="business-hero">
+    <!-- Enhanced Hero Section with Animation -->
+    <section class="business-hero engineering-hero-enhanced">
+        <div class="engineering-particles"></div>
         <div class="container">
             <div class="business-hero-content">
-                <div class="business-icon-large">
+                <div class="business-icon-large engineering-icon-animated">
                     <i class="fas fa-code"></i>
+                    <div class="engineering-orbit"></div>
                 </div>
-                <h1 class="business-hero-title">エンジニアリング事業</h1>
-                <p class="business-hero-subtitle">Engineering Services</p>
-                <p class="business-hero-description">
+                <h1 class="business-hero-title" data-lang-key="engineering-title">エンジニアリング事業</h1>
+                <p class="business-hero-subtitle" data-lang-key="engineering-subtitle">Engineering Services</p>
+                <p class="business-hero-description" data-lang-key="engineering-description">
+                    25名以上の多国籍エンジニアチーム | 平均7年以上の業界経験<br>
+                    システム開発・AI/DX・クラウド技術の最先端エキスパート集団で<br>
                     お客様のIT開発ニーズに幅広く対応し、高品質なシステム開発・運用サービスを提供します。
                 </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">年間プロジェクト</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">システム可用性</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50%</span>
+                        <span class="stat-label">開発効率向上</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -116,75 +139,134 @@
         </div>
     </section>
 
-    <!-- Development Process -->
-    <section class="development-process">
+    <!-- Enhanced Development Process -->
+    <section class="development-process enhanced">
         <div class="container">
             <h2 class="section-title">開発プロセス</h2>
-            <div class="process-flow">
-                <div class="process-step">
-                    <div class="step-number">1</div>
+            <p class="section-subtitle">お客様のプロジェクトを成功に導く体系的なアプローチ</p>
+            
+            <!-- Horizontal Process Flow -->
+            <div class="horizontal-process">
+                <div class="process-line"></div>
+                
+                <div class="process-step" data-step="1">
+                    <div class="step-circle">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                    </div>
                     <div class="step-content">
                         <h3>要件定義</h3>
-                        <p>お客様の課題とニーズを詳細にヒアリングし、システムの要件を明確化します。</p>
+                        <p>お客様の課題とニーズを詳細にヒアリングし、システムの要件を明確化</p>
+                        <div class="step-features">
+                            <span>ヒアリング</span>
+                            <span>要件整理</span>
+                            <span>仕様策定</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="process-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
+                <div class="process-step" data-step="2">
+                    <div class="step-circle">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                    </div>
                     <div class="step-content">
                         <h3>設計</h3>
-                        <p>システムアーキテクチャ、UI/UX、データベース設計など、詳細設計を行います。</p>
+                        <p>システムアーキテクチャ、UI/UX、データベース設計など、詳細設計を実施</p>
+                        <div class="step-features">
+                            <span>システム設計</span>
+                            <span>UI/UX設計</span>
+                            <span>DB設計</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="process-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
+                <div class="process-step" data-step="3">
+                    <div class="step-circle">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
                     <div class="step-content">
                         <h3>開発</h3>
-                        <p>アジャイル開発手法を採用し、反復的にシステムを構築していきます。</p>
+                        <p>アジャイル開発手法を採用し、反復的にシステムを構築</p>
+                        <div class="step-features">
+                            <span>アジャイル開発</span>
+                            <span>コードレビュー</span>
+                            <span>品質管理</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="process-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
+                <div class="process-step" data-step="4">
+                    <div class="step-circle">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                    </div>
                     <div class="step-content">
                         <h3>テスト</h3>
-                        <p>単体テスト、結合テスト、システムテストを実施し、品質を保証します。</p>
+                        <p>単体テスト、結合テスト、システムテストを実施し、品質を保証</p>
+                        <div class="step-features">
+                            <span>単体テスト</span>
+                            <span>結合テスト</span>
+                            <span>品質保証</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="process-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">5</div>
+                <div class="process-step" data-step="5">
+                    <div class="step-circle">
+                        <div class="step-number">5</div>
+                        <div class="step-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
                     <div class="step-content">
                         <h3>運用保守</h3>
-                        <p>リリース後の運用監視、保守メンテナンス、機能追加に対応します。</p>
+                        <p>リリース後の運用監視、保守メンテナンス、機能追加に対応</p>
+                        <div class="step-features">
+                            <span>24/7監視</span>
+                            <span>保守対応</span>
+                            <span>機能追加</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technology Stack -->
-    <section class="technology-section">
+    <!-- Technology Stack Enhanced -->
+    <section class="technology-section enhanced">
         <div class="container">
-            <h2 class="section-title">技術スタック</h2>
-            <div class="tech-categories">
+            <h2 class="section-title">技術スタック & 資格保有</h2>
+            
+            <div class="tech-overview">
+                <div class="tech-stat">
+                    <i class="fas fa-award"></i>
+                    <span>AWS/Azure/GCP認定20名以上</span>
+                </div>
+                <div class="tech-stat">
+                    <i class="fas fa-certificate"></i>
+                    <span>情報処理技術者試験合格者多数</span>
+                </div>
+                <div class="tech-stat">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>情報処理安全確保支援士</span>
+                </div>
+                <div class="tech-stat">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>PMP資格保有者</span>
+                </div>
+            </div>
+
+            <div class="tech-grid">
                 <div class="tech-category">
                     <h3>フロントエンド</h3>
                     <div class="tech-items">
@@ -336,18 +418,64 @@
         </div>
     </section>
 
-    <!-- Case Studies -->
-    <section class="case-studies">
+    <!-- Enhanced Case Studies -->
+    <section class="case-studies enhanced">
         <div class="container">
-            <h2 class="section-title">導入事例</h2>
+            <h2 class="section-title">導入実績 & 大型プロジェクト</h2>
+            
+            <!-- Major Projects Timeline -->
+            <div class="projects-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>メガバンク次期基盤構築</h4>
+                        <p>AWS共通基盤構築・運用保守</p>
+                        <span class="project-scale">延べ100+人月（継続中）</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>物流システム最適化</h4>
+                        <p>AWS WMSシステム・画像認識PoC</p>
+                        <span class="project-scale">延べ200+人月（継続中）</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>上場医療データ専門会社</h4>
+                        <p>ビッグデータ分析基盤構築</p>
+                        <span class="project-scale">延べ100+人月（継続中）</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>ECプラットフォーム構築</h4>
+                        <p>中堅アパレル企業のオンライン販売チャネル</p>
+                        <span class="project-scale">延べ50+人月（完了）</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Case Studies -->
             <div class="cases-grid">
                 <div class="case-card">
                     <div class="case-image">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <div class="case-content">
-                        <h3>ECサイト構築</h3>
-                        <h4>中堅アパレル企業様</h4>
+                        <h3>中堅アパレル企業様</h3>
+                        <h4>ECサイト構築</h4>
                         <p>従来の店舗販売に加えて、オンライン販売チャネルを新規構築。React + Node.js構成で高性能なECサイトを開発し、売上30%向上を実現。</p>
                         <div class="case-results">
                             <span class="result-item">売上30%向上</span>
@@ -362,8 +490,8 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="case-content">
-                        <h3>基幹システム刷新</h3>
-                        <h4>製造業大手様</h4>
+                        <h3>製造業大手様</h3>
+                        <h4>基幹システム刷新</h4>
                         <p>20年使用していたレガシーシステムをクラウドネイティブなマイクロサービス架構に刷新。運用コスト50%削減と処理性能10倍向上を達成。</p>
                         <div class="case-results">
                             <span class="result-item">運用コスト50%削減</span>
@@ -378,8 +506,8 @@
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="case-content">
-                        <h3>モバイルアプリ開発</h3>
-                        <h4">フィンテック企業様</h4>
+                        <h3>フィンテック企業様</h3>
+                        <h4>モバイルアプリ開発</h4>
                         <p>金融サービス向けモバイルアプリをReact Nativeで開発。高いセキュリティ要件をクリアし、iOS・Android同時リリースでユーザー獲得を加速。</p>
                         <div class="case-results">
                             <span class="result-item">同時リリース実現</span>
@@ -388,17 +516,39 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="case-card">
+                    <div class="case-image">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="case-content">
+                        <h3>ネット金融サービス様</h3>
+                        <h4>AWSクラウド基盤構築</h4>
+                        <p>CI/CD自動化を含むクラウド基盤を構築。IaCによるインフラ自動化で運用効率を大幅改善し、24/7監視体制を実現。</p>
+                        <div class="case-results">
+                            <span class="result-item">デプロイ時間90%短縮</span>
+                            <span class="result-item">可用性99.99%</span>
+                            <span class="result-item">運用コスト50%削減</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact CTA -->
-    <section class="contact-cta">
+    <!-- Contact CTA Enhanced -->
+    <section class="contact-cta enhanced">
         <div class="container">
             <div class="cta-content">
-                <h2>エンジニアリングサービスに関するお問い合わせ</h2>
-                <p>お客様のシステム開発課題を解決する最適なソリューションをご提案いたします。まずはお気軽にご相談ください。</p>
-                <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                <h2>エンジニアリングサービスで未来を構築する</h2>
+                <p>
+                    最先端の開発技術と豊富な実績で、お客様のシステム開発課題を革新的に解決します。<br>
+                    まずは貴社の課題をお聞かせください。最適なソリューションをご提案いたします。
+                </p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="cta-button primary">お問い合わせ</a>
+                    <a href="#" class="cta-button secondary">技術資料ダウンロード</a>
+                </div>
             </div>
         </div>
     </section>
@@ -422,5 +572,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="js/language-switcher.js"></script>
 </body>
 </html>

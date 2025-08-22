@@ -6,20 +6,25 @@
     <title>Blockchain & Web3事業 - TERABOX</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="blockchain-web3.css">
+    <link rel="stylesheet" href="business-pages.css">
+    <link rel="stylesheet" href="blockchain-web3.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <a href="index.html" class="logo">TERABOX</a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Terabox Logo" class="logo-icon">
+                TERABOX
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html#news" data-lang-key="nav-news">お知らせ</a></li>
+                <li><a href="index.html#strength" data-lang-key="nav-strength">当社の強み</a></li>
+                <li><a href="index.html#business-news" data-lang-key="nav-business-news">業務新聞</a></li>
                 <li><a href="index.html#company" data-lang-key="nav-company">会社概要</a></li>
                 <li><a href="index.html#message" data-lang-key="nav-message">代表挨拶</a></li>
                 <li><a href="index.html#business" data-lang-key="nav-business">事業内容</a></li>
+                <li><a href="index.html#cases" data-lang-key="nav-cases">導入実績</a></li>
                 <li><a href="index.html#recruit" data-lang-key="nav-recruit">採用情報</a></li>
-                <li><a href="index.html#access" data-lang-key="nav-access">アクセス</a></li>
                 <li><a href="index.html#contact" data-lang-key="nav-contact">お問い合わせ</a></li>
             </ul>
             <div class="language-switcher">
@@ -43,9 +48,9 @@
                 <div class="business-icon-large">
                     <i class="fas fa-link"></i>
                 </div>
-                <h1 class="business-hero-title">Blockchain & Web3事業</h1>
-                <p class="business-hero-subtitle">Next Generation Web3 Technology</p>
-                <p class="business-hero-description">
+                <h1 class="business-hero-title" data-lang-key="blockchain-title">Blockchain & Web3事業</h1>
+                <p class="business-hero-subtitle" data-lang-key="blockchain-subtitle">Next Generation Web3 Technology</p>
+                <p class="business-hero-description" data-lang-key="blockchain-description">
                     2016年から蓄積してきた豊富な開発実績と技術力で、次世代Web3ソリューションを提供。<br>
                     エンタープライズ向けブロックチェーンから公链開発まで、幅広い領域をカバーします。
                 </p>
@@ -328,36 +333,40 @@
                     <span class="verified-badge">✓ 実装済</span>
                 </div>
                 
-                <div class="blockchain-item">
+                <div class="blockchain-item development">
                     <div class="blockchain-icon">
                         <i class="fas fa-coins"></i>
                     </div>
                     <h3>Binance Smart Chain</h3>
                     <p>高速・低コストのDeFiエコシステム</p>
+                    <span class="development-badge">開発予定</span>
                 </div>
                 
-                <div class="blockchain-item">
+                <div class="blockchain-item development">
                     <div class="blockchain-icon">
                         <i class="fas fa-globe"></i>
                     </div>
                     <h3>Polygon</h3>
                     <p>Ethereumのレイヤー2スケーリング</p>
+                    <span class="development-badge">開発予定</span>
                 </div>
                 
-                <div class="blockchain-item">
+                <div class="blockchain-item development">
                     <div class="blockchain-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
                     <h3>Solana</h3>
                     <p>高性能・低遅延のブロックチェーン</p>
+                    <span class="development-badge">開発予定</span>
                 </div>
                 
-                <div class="blockchain-item">
+                <div class="blockchain-item development">
                     <div class="blockchain-icon">
                         <i class="fas fa-layer-group"></i>
                     </div>
                     <h3>Polkadot</h3>
                     <p>マルチチェーン相互運用プラットフォーム</p>
+                    <span class="development-badge">開発予定</span>
                 </div>
             </div>
         </div>
@@ -589,8 +598,7 @@
     </footer>
 
     <script src="script.js"></script>
-	<script src="blockchain-web3.js"></script>
-    
-    
+    <script src="blockchain-web3.js"></script>
+    <script src="js/language-switcher.js"></script>
 </body>
 </html>

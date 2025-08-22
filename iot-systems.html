@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IoT・スマートシステム事業 - TERABOX</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="business-pages.css">
+    <link rel="stylesheet" href="styles.css">         <!-- 基础样式 -->
+    <link rel="stylesheet" href="business-pages.css"> <!-- 业务页面通用样式 -->
+    <link rel="stylesheet" href="iot-systems.css">    <!-- IoT页面专用样式 -->
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <a href="index.html" class="logo">TERABOX</a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Terabox Logo" class="logo-icon">
+                TERABOX
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html#news" data-lang-key="nav-news">お知らせ</a></li>
+                <li><a href="index.html#strength" data-lang-key="nav-strength">当社の強み</a></li>
+                <li><a href="index.html#business-news" data-lang-key="nav-business-news">業務新聞</a></li>
                 <li><a href="index.html#company" data-lang-key="nav-company">会社概要</a></li>
                 <li><a href="index.html#message" data-lang-key="nav-message">代表挨拶</a></li>
                 <li><a href="index.html#business" data-lang-key="nav-business">事業内容</a></li>
+                <li><a href="index.html#cases" data-lang-key="nav-cases">導入実績</a></li>
                 <li><a href="index.html#recruit" data-lang-key="nav-recruit">採用情報</a></li>
-                <li><a href="index.html#access" data-lang-key="nav-access">アクセス</a></li>
                 <li><a href="index.html#contact" data-lang-key="nav-contact">お問い合わせ</a></li>
             </ul>
             <div class="language-switcher">
@@ -36,26 +41,44 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="business-hero">
+    <!-- Enhanced Hero Section with Animation -->
+    <section class="business-hero iot-hero-enhanced">
+        <div class="iot-particles"></div>
         <div class="container">
             <div class="business-hero-content">
-                <div class="business-icon-large">
+                <div class="business-icon-large iot-icon-animated">
                     <i class="fas fa-microchip"></i>
+                    <div class="iot-orbit"></div>
                 </div>
-                <h1 class="business-hero-title">IoT・スマートシステム事業</h1>
-                <p class="business-hero-subtitle">IoT & Smart Systems</p>
-                <p class="business-hero-description">
-                    IoT技術を活用したスマートシステムで、リアルタイム監視・管理・最適化を実現します。
+                <h1 class="business-hero-title" data-lang-key="iot-title">IoT・スマートシステム事業</h1>
+                <p class="business-hero-subtitle" data-lang-key="iot-subtitle">IoT & Smart Devices</p>
+                <p class="business-hero-description" data-lang-key="iot-description">
+                    25名以上の多国籍エンジニアチーム | 平均7年以上の業界経験<br>
+                    IoT・スマートデバイス・エッジコンピューティング技術で<br>
+                    リアルタイム監視・管理・最適化を実現し、効率的な業務環境を構築します。
                 </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10,000+</span>
+                        <span class="stat-label">デバイス管理実績</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">システム稼働率</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">80%</span>
+                        <span class="stat-label">運用コスト削減</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Overview -->
-    <section class="services-overview">
+    <!-- Enhanced Services Overview -->
+    <section class="services-overview enhanced">
         <div class="container">
-            <h2 class="section-title">サービス概要</h2>
+            <h2 class="section-title">IoTサービス概要 & 革新技術</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
@@ -116,10 +139,11 @@
         </div>
     </section>
 
-    <!-- IoT Architecture -->
-    <section class="architecture-section">
+    <!-- Enhanced IoT Architecture -->
+    <section class="architecture-section enhanced">
         <div class="container">
-            <h2 class="section-title">IoTアーキテクチャ</h2>
+            <h2 class="section-title">IoTアーキテクチャ & システム構成</h2>
+            <p class="section-subtitle">多層構造による堅牢で拡張性の高いIoTエコシステム</p>
             <div class="architecture-diagram">
                 <div class="arch-layer">
                     <h3>デバイス層</h3>
@@ -196,10 +220,10 @@
         </div>
     </section>
 
-    <!-- Technology Features -->
-    <section class="features-section">
+    <!-- Enhanced Technology Features -->
+    <section class="features-section enhanced">
         <div class="container">
-            <h2 class="section-title">技術的特徴</h2>
+            <h2 class="section-title">技術的特徴 & コア技術</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -236,10 +260,10 @@
         </div>
     </section>
 
-    <!-- Case Studies -->
-    <section class="case-studies">
+    <!-- Enhanced Case Studies -->
+    <section class="case-studies enhanced">
         <div class="container">
-            <h2 class="section-title">導入事例</h2>
+            <h2 class="section-title">導入実績 & 成功事例</h2>
             <div class="cases-grid">
                 <div class="case-card">
                     <div class="case-image">
@@ -292,13 +316,19 @@
         </div>
     </section>
 
-    <!-- Contact CTA -->
-    <section class="contact-cta">
+    <!-- Enhanced Contact CTA -->
+    <section class="contact-cta enhanced">
         <div class="container">
             <div class="cta-content">
-                <h2>IoT・スマートシステムに関するお問い合わせ</h2>
-                <p>お客様の業務に最適なIoTソリューションをご提案いたします。導入効果やコストについてもお気軽にご相談ください。</p>
-                <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                <h2>IoTで未来のスマート環境を実現する</h2>
+                <p>
+                    最先端のIoT技術と豊富な実績で、お客様の業務効率化と革新を実現します。<br>
+                    まずは現在の課題をお聞かせください。最適なIoTソリューションをご提案いたします。
+                </p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="cta-button primary">お問い合わせ</a>
+                    <a href="#" class="cta-button secondary">IoT導入ガイド</a>
+                </div>
             </div>
         </div>
     </section>
@@ -322,5 +352,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="js/language-switcher.js"></script>
 </body>
 </html>

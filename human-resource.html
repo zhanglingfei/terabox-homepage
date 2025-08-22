@@ -13,14 +13,18 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <a href="index.html" class="logo">TERABOX</a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Terabox Logo" class="logo-icon">
+                TERABOX
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html#news" data-lang-key="nav-news">お知らせ</a></li>
+                <li><a href="index.html#strength" data-lang-key="nav-strength">当社の強み</a></li>
+                <li><a href="index.html#business-news" data-lang-key="nav-business-news">業務新聞</a></li>
                 <li><a href="index.html#company" data-lang-key="nav-company">会社概要</a></li>
                 <li><a href="index.html#message" data-lang-key="nav-message">代表挨拶</a></li>
                 <li><a href="index.html#business" data-lang-key="nav-business">事業内容</a></li>
+                <li><a href="index.html#cases" data-lang-key="nav-cases">導入実績</a></li>
                 <li><a href="index.html#recruit" data-lang-key="nav-recruit">採用情報</a></li>
-                <li><a href="index.html#access" data-lang-key="nav-access">アクセス</a></li>
                 <li><a href="index.html#contact" data-lang-key="nav-contact">お問い合わせ</a></li>
             </ul>
             <div class="language-switcher">
@@ -45,9 +49,9 @@
                 <div class="business-icon-large">
                     <i class="fas fa-users"></i>
                 </div>
-                <h1 class="business-hero-title">IT人材サービス事業</h1>
-                <p class="business-hero-subtitle">IT Human Resource Solutions</p>
-                <p class="business-hero-description">
+                <h1 class="business-hero-title" data-lang-key="hr-title">IT人材サービス事業</h1>
+                <p class="business-hero-subtitle" data-lang-key="hr-subtitle">IT Human Resource Solutions</p>
+                <p class="business-hero-description" data-lang-key="hr-description">
                     25名以上の多国籍エンジニアチーム | 平均7年以上の業界経験<br>
                     年間20社以上の企業様へ最適な人材ソリューションを提供<br>
                     人材紹介・派遣・教育訓練・プラットフォーム運営の総合サービス
@@ -92,7 +96,8 @@
                     </div>
                 </div>
                 <div class="org-image-placeholder">
-                    <img src="images/hr-organization.jpg" alt="組織体制図" />
+                    <img src="images/organization-jp.png" alt="組織体制図" class="lang-image ja-only" />
+                    <img src="images/organization-en.png" alt="Organization Structure" class="lang-image en-zh-only" />
                     <!-- Placeholder for organization chart image -->
                 </div>
             </div>
@@ -248,8 +253,8 @@
                 </div>
                 
                 <div class="team-image-placeholder">
-                    <img src="images/team-photo.jpg" alt="チーム写真" />
-                    <!-- Placeholder for team photo -->
+                    <img src="images/team.png" alt="チーム写真" />
+                    <!-- Team photo showing our diverse professional team -->
                 </div>
             </div>
         </div>
@@ -473,8 +478,8 @@
                 </div>
             </div>
             <div class="industry-image-placeholder">
-                <img src="images/industry-collage.jpg" alt="対応業界" />
-                <!-- Placeholder for industry collage image -->
+                <img src="images/partners.png" alt="対応業界" />
+                <!-- Industry partners and collaboration image -->
             </div>
         </div>
     </section>
@@ -551,8 +556,8 @@
             <div class="platform-demo">
                 <div class="platform-visual">
                     <div class="platform-mockup">
-                        <img src="images/platform-mockup.jpg" alt="プラットフォーム画面" />
-                        <!-- Placeholder for platform mockup -->
+                        <img src="images/ai-matching-platform.png" alt="AI搭載の次世代人材管理システム プラットフォーム画面" style="width: 115%; height: auto;" />
+                        <!-- AI matching platform interface -->
                     </div>
                 </div>
                 
@@ -788,5 +793,6 @@
 
     <script src="script.js"></script>
     <script src="human-resource.js"></script>
+    <script src="js/language-switcher.js"></script>
 </body>
 </html>
