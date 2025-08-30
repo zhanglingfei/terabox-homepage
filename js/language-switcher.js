@@ -199,7 +199,7 @@ const translations = {
         
         // Contact Section
         'contact-title': 'お問い合わせ',
-        'contact-subtitle': 'お問い合わせ',
+        'contact-subtitle': 'Contact Us',
         'contact-description': 'システム開発、AI/DXソリューション、人材サービスなど、<br>お気軽にご相談ください。',
         'contact-cta': 'お問い合わせする',
         
@@ -770,7 +770,7 @@ const translations = {
         
         // Contact Section
         'contact-title': 'Contact Us',
-        'contact-subtitle': 'Contact Us',
+        'contact-subtitle': 'Get in Touch',
         'contact-description': 'System development, AI/DX solutions, HR services, and more.<br>Feel free to contact us for consultation.',
         'contact-cta': 'Contact Us',
         
@@ -1336,7 +1336,7 @@ const translations = {
         
         // Contact Section
         'contact-title': '联系我们',
-        'contact-subtitle': '',
+        'contact-subtitle': '欢迎咨询',
         'contact-description': '系统开发、AI/DX解决方案、人才服务等，<br>欢迎随时咨询。',
         'contact-cta': '联系我们',
         
@@ -1718,7 +1718,7 @@ function switchLanguage(lang) {
     // Update all elements with data-lang-key attribute
     document.querySelectorAll('[data-lang-key]').forEach(element => {
         const key = element.getAttribute('data-lang-key');
-        if (translations[lang] && translations[lang][key]) {
+        if (translations[lang] && translations[lang][key] !== undefined) {
             // Special handling for form placeholder
             if (element.hasAttribute('placeholder') && key === 'form-placeholder') {
                 element.placeholder = translations[lang][key];
