@@ -17,8 +17,8 @@ const hrTranslations = {
         'hr-title': 'IT人材サービス事業',
         'hr-subtitle': 'IT Human Resource Solutions',
         'hr-description': '25名以上の多国籍エンジニアチーム | 平均7年以上の業界経験<br>年間20社以上の企業様へ最適な人材ソリューションを提供<br>人材紹介・派遣・教育訓練・プラットフォーム運営の総合サービス',
-        'hr-license1': '有料職業紹介許可証: 13-ユ-309628',
-        'hr-license2': '労働者派遣事業許可証: 派13-312878',
+        'hr-license1': '職業紹介許可証: 13-ユ-309628',
+        'hr-license2': '労働派遣事業許可証: 派13-312878',
         
         // Organization Structure
         'hr-org-title': '事業部組織体制',
@@ -248,8 +248,8 @@ const hrTranslations = {
         'hr-title': 'IT Human Resource Services',
         'hr-subtitle': 'IT Human Resource Solutions',
         'hr-description': '25+ multinational engineer team | Average 7+ years industry experience<br>Providing optimal talent solutions to 20+ companies annually<br>Comprehensive services: recruitment, staffing, training, platform operations',
-        'hr-license1': 'Paid Employment Agency License: 13-Yu-309628',
-        'hr-license2': 'Worker Dispatch Business License: Dispatch 13-312878',
+        'hr-license1': 'Employment Agency License: 13-Yu-309628',
+        'hr-license2': 'Labor Dispatch Business License: Dispatch 13-312878',
         
         // Organization Structure
         'hr-org-title': 'Business Unit Organization',

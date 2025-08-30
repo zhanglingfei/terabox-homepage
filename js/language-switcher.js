@@ -16,7 +16,7 @@ const translations = {
         
         // Hero Section
         'hero-title': 'TERABOX',
-        'hero-subtitle': '信頼できるITパートナー',
+        'hero-subtitle': '社会と人々の生活をより豊かなものへと推進し進化をもたらすIT組織を目指していきます',
         'hero-description': 'システムエンジニアリング・AI/DXソリューション・スマート機器導入<br>25名以上の専門エンジニアチーム、平均7年以上の業界経験<br>お客様のビジネス課題を解決する一站式ITソリューション',
         'hero-cta': '詳細を見る',
         'hero-stat-engineers': '専門エンジニア',
@@ -76,6 +76,22 @@ const translations = {
         'company-certifications-value': 'Pマーク認証 10825028<br>有料職業紹介許可証 13-ユ-309628<br>労働者派遣事業許可証 派13-312878<br>Google Cloud Partner',
         'company-lawyer-label': '顧問弁護士',
         'company-lawyer-value': '飯田綜合法律事務所',
+        
+        // Subsidiary Company Info
+        'subsidiary-company-title': '博科思信息科技（広州）有限公司',
+        'subsidiary-company-badge': 'Guangzhou Branch',
+        'subsidiary-address-label': '所在地',
+        'subsidiary-address-value': '〒510000<br>中国広東省広州市<br>海珠区赤岗西路205号A棟210室A16',
+        'subsidiary-tel-label': 'TEL',
+        'subsidiary-tel-value': '86-13167022930',
+        'subsidiary-established-label': '設立',
+        'subsidiary-established-value': '2019年12月',
+        'subsidiary-capital-label': '資本金',
+        'subsidiary-capital-value': '50万人民币',
+        'subsidiary-ceo-label': '代表者',
+        'subsidiary-ceo-value': '荆　威',
+        'subsidiary-business-label': '事業内容',
+        'subsidiary-business-value': '技術開発・オフショア開発センター',
         
         // Message Section
         'message-title': '代表挨拶',
@@ -571,7 +587,7 @@ const translations = {
         
         // Hero Section
         'hero-title': 'TERABOX',
-        'hero-subtitle': 'Your Trusted IT Partner',
+        'hero-subtitle': 'We strive to be an IT organization that promotes and brings evolution to society and people\'s lives, making them richer.',
         'hero-description': 'System Engineering • AI/DX Solutions • Smart Device Implementation<br>25+ Professional Engineers, Average 7+ Years Industry Experience<br>One-Stop IT Solutions for Your Business Challenges',
         'hero-cta': 'Learn More',
         'hero-stat-engineers': 'Professional Engineers',
@@ -631,6 +647,22 @@ const translations = {
         'company-certifications-value': 'P MARK Certification 10825028<br>Employment Agency License 13-ユ-309628<br>Worker Dispatch License 派13-312878<br>Google Cloud Partner',
         'company-lawyer-label': 'Legal Advisor',
         'company-lawyer-value': 'Iida Sogo Law Office',
+        
+        // Subsidiary Company Info
+        'subsidiary-company-title': 'Bocos Information Technology (Guangzhou) Co., Ltd.',
+        'subsidiary-company-badge': 'Guangzhou Branch',
+        'subsidiary-address-label': 'Address',
+        'subsidiary-address-value': '〒510000<br>Guangzhou, Guangdong, China<br>Room A16, 210, Block A, No.205 Chigang West Road, Haizhu District',
+        'subsidiary-tel-label': 'TEL',
+        'subsidiary-tel-value': '86-13167022930',
+        'subsidiary-established-label': 'Established',
+        'subsidiary-established-value': 'December 2019',
+        'subsidiary-capital-label': 'Capital',
+        'subsidiary-capital-value': '500,000 RMB',
+        'subsidiary-ceo-label': 'Representative',
+        'subsidiary-ceo-value': 'Jing Wei',
+        'subsidiary-business-label': 'Business Scope',
+        'subsidiary-business-value': 'Technology Development & Offshore Development Center',
         
         // Message Section
         'message-title': 'Message from CEO',
@@ -1121,7 +1153,7 @@ const translations = {
         
         // Hero Section
         'hero-title': 'TERABOX',
-        'hero-subtitle': '值得信赖的IT合作伙伴',
+        'hero-subtitle': '我们致力于成为一个推动社会和人们生活变得更加丰富，并带来进化的IT组织',
         'hero-description': '系统工程 • AI/DX解决方案 • 智能机器人导入<br>25名以上专业工程师团队，平均7年以上行业经验<br>为您的商业挑战提供一站式IT解决方案',
         'hero-cta': '了解更多',
         'hero-stat-engineers': '专业工程师',
@@ -1181,6 +1213,22 @@ const translations = {
         'company-certifications-value': 'P MARK认证 10825028<br>职业介绍许可证 13-ユ-309628<br>劳动派遣事业许可证 派13-312878<br>Google Cloud Partner',
         'company-lawyer-label': '法律顾问',
         'company-lawyer-value': '饭田综合法律事务所',
+        
+        // Subsidiary Company Info
+        'subsidiary-company-title': '博科思信息科技（广州）有限公司',
+        'subsidiary-company-badge': '广州分公司',
+        'subsidiary-address-label': '地址',
+        'subsidiary-address-value': '〒510000<br>中国广东省广州市<br>海珠区赤岗西路205号A栋210室A16',
+        'subsidiary-tel-label': '电话',
+        'subsidiary-tel-value': '86-13167022930',
+        'subsidiary-established-label': '成立时间',
+        'subsidiary-established-value': '2019年12月',
+        'subsidiary-capital-label': '注册资本',
+        'subsidiary-capital-value': '50万人民币',
+        'subsidiary-ceo-label': '法人代表',
+        'subsidiary-ceo-value': '荆威',
+        'subsidiary-business-label': '经营范围',
+        'subsidiary-business-value': '技术开发・离岸开发中心',
         
         // Message Section
         'message-title': '总裁致辞',
@@ -1693,8 +1741,14 @@ function switchLanguage(lang) {
     // Store selected language in localStorage
     try {
         localStorage.setItem('terabox-language', lang);
+        localStorage.setItem('selectedLanguage', lang); // Also store for strength section
     } catch (e) {
         console.warn('Unable to save language preference to localStorage:', e);
+    }
+    
+    // Call strength section language switch if available
+    if (typeof window.strengthSwitchLanguage === 'function') {
+        window.strengthSwitchLanguage(lang);
     }
 
     // Handle language-specific images
