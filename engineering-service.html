@@ -29,13 +29,13 @@
             </ul>
             <div class="language-switcher">
                 <button class="lang-btn active" data-lang="ja" title="日本語">
-                    <img src="images/japanese.png" alt="日本語" class="flag-image">
+                    <span class="lang-text">JP</span>
                 </button>
                 <button class="lang-btn" data-lang="en" title="English">
-                    <img src="images/english.png" alt="English" class="flag-image">
+                    <span class="lang-text">EN</span>
                 </button>
                 <button class="lang-btn" data-lang="zh" title="中文">
-                    <img src="images/chinese.png" alt="中文" class="flag-image">
+                    <span class="lang-text">CN</span>
                 </button>
             </div>
         </nav>
@@ -60,15 +60,15 @@
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">100+</span>
-                        <span class="stat-label">年間プロジェクト</span>
+                        <span class="stat-label" data-lang-key="eng-hero-stat-projects">年間プロジェクト</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">99.9%</span>
-                        <span class="stat-label">システム可用性</span>
+                        <span class="stat-label" data-lang-key="eng-hero-stat-availability">システム可用性</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">50%</span>
-                        <span class="stat-label">開発効率向上</span>
+                        <span class="stat-label" data-lang-key="eng-hero-stat-efficiency">開発効率向上</span>
                     </div>
                 </div>
             </div>
@@ -78,19 +78,19 @@
     <!-- Services Overview -->
     <section class="services-overview">
         <div class="container">
-            <h2 class="section-title">サービス概要</h2>
+            <h2 class="section-title" data-lang-key="eng-services-overview">サービス概要</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>受託開発</h3>
-                    <p>要件定義から設計・開発・テストまで、一貫したシステム開発サービスを提供し、お客様のビジネス要求を実現します。</p>
+                    <h3 data-lang-key="eng-service-development">受託開発</h3>
+                    <p data-lang-key="eng-service-development-desc">要件定義から設計・開発・テストまで、一貫したシステム開発サービスを提供し、お客様のビジネス要求を実現します。</p>
                     <ul class="service-features">
-                        <li>Webアプリケーション開発</li>
-                        <li>モバイルアプリ開発</li>
-                        <li>API開発・連携</li>
-                        <li>レガシーシステム刷新</li>
+                        <li data-lang-key="eng-feature-web-app">Webアプリケーション開発</li>
+                        <li data-lang-key="eng-feature-mobile-app">モバイルアプリ開発</li>
+                        <li data-lang-key="eng-feature-api">API開発・連携</li>
+                        <li data-lang-key="eng-feature-legacy">レガシーシステム刷新</li>
                     </ul>
                 </div>
 
@@ -98,13 +98,13 @@
                     <div class="service-icon">
                         <i class="fas fa-users-cog"></i>
                     </div>
-                    <h3>業務支援（SES）</h3>
-                    <p>経験豊富なエンジニアをお客様先に派遣し、開発プロジェクトの成功をサポートします。</p>
+                    <h3 data-lang-key="eng-service-ses">業務支援（SES）</h3>
+                    <p data-lang-key="eng-service-ses-desc">経験豊富なエンジニアをお客様先に派遣し、開発プロジェクトの成功をサポートします。</p>
                     <ul class="service-features">
-                        <li>システムエンジニア派遣</li>
-                        <li>プロジェクトマネージャー派遣</li>
-                        <li>テクニカルリード派遣</li>
-                        <li>長期・短期対応</li>
+                        <li data-lang-key="eng-feature-se-dispatch">システムエンジニア派遣</li>
+                        <li data-lang-key="eng-feature-pm-dispatch">プロジェクトマネージャー派遣</li>
+                        <li data-lang-key="eng-feature-tech-lead">テクニカルリード派遣</li>
+                        <li data-lang-key="eng-feature-term-support">長期・短期対応</li>
                     </ul>
                 </div>
 
@@ -112,13 +112,13 @@
                     <div class="service-icon">
                         <i class="fas fa-server"></i>
                     </div>
-                    <h3>システム開発・運用</h3>
-                    <p>システム構築から運用保守まで、ライフサイクル全体をカバーする包括的なサービスを提供します。</p>
+                    <h3 data-lang-key="eng-service-operation">システム開発・運用</h3>
+                    <p data-lang-key="eng-service-operation-desc">システム構築から運用保守まで、ライフサイクル全体をカバーする包括的なサービスを提供します。</p>
                     <ul class="service-features">
-                        <li>インフラ設計・構築</li>
-                        <li>クラウド移行支援</li>
-                        <li>運用監視・保守</li>
-                        <li>パフォーマンス最適化</li>
+                        <li data-lang-key="eng-feature-infra-design">インフラ設計・構築</li>
+                        <li data-lang-key="eng-feature-cloud-migration">クラウド移行支援</li>
+                        <li data-lang-key="eng-feature-ops-monitoring">運用監視・保守</li>
+                        <li data-lang-key="eng-feature-performance">パフォーマンス最適化</li>
                     </ul>
                 </div>
 
@@ -126,13 +126,13 @@
                     <div class="service-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>技術コンサルティング</h3>
-                    <p>最新技術動向と豊富な経験を基に、お客様の技術戦略策定と実装を支援します。</p>
+                    <h3 data-lang-key="eng-service-consulting">技術コンサルティング</h3>
+                    <p data-lang-key="eng-service-consulting-desc">最新技術動向と豊富な経験を基に、お客様の技術戦略策定と実装を支援します。</p>
                     <ul class="service-features">
-                        <li>技術選定支援</li>
-                        <li>アーキテクチャ設計</li>
-                        <li>コードレビュー</li>
-                        <li>技術教育・研修</li>
+                        <li data-lang-key="eng-feature-tech-selection">技術選定支援</li>
+                        <li data-lang-key="eng-feature-arch-design">アーキテクチャ設計</li>
+                        <li data-lang-key="eng-feature-code-review">コードレビュー</li>
+                        <li data-lang-key="eng-feature-tech-training">技術教育・研修</li>
                     </ul>
                 </div>
             </div>
@@ -142,8 +142,8 @@
     <!-- Enhanced Development Process -->
     <section class="development-process enhanced">
         <div class="container">
-            <h2 class="section-title">開発プロセス</h2>
-            <p class="section-subtitle">お客様のプロジェクトを成功に導く体系的なアプローチ</p>
+            <h2 class="section-title" data-lang-key="eng-development-process">開発プロセス</h2>
+            <p class="section-subtitle" data-lang-key="eng-process-subtitle">お客様のプロジェクトを成功に導く体系的なアプローチ</p>
             
             <!-- Horizontal Process Flow -->
             <div class="horizontal-process">
@@ -157,12 +157,12 @@
                         </div>
                     </div>
                     <div class="step-content">
-                        <h3>要件定義</h3>
-                        <p>お客様の課題とニーズを詳細にヒアリングし、システムの要件を明確化</p>
+                        <h3 data-lang-key="eng-process-requirements">要件定義</h3>
+                        <p data-lang-key="eng-process-requirements-desc">お客様の課題とニーズを詳細にヒアリングし、システムの要件を明確化</p>
                         <div class="step-features">
-                            <span>ヒアリング</span>
-                            <span>要件整理</span>
-                            <span>仕様策定</span>
+                            <span data-lang-key="eng-tag-hearing">ヒアリング</span>
+                            <span data-lang-key="eng-tag-requirements">要件整理</span>
+                            <span data-lang-key="eng-tag-specification">仕様策定</span>
                         </div>
                     </div>
                 </div>
@@ -175,12 +175,12 @@
                         </div>
                     </div>
                     <div class="step-content">
-                        <h3>設計</h3>
-                        <p>システムアーキテクチャ、UI/UX、データベース設計など、詳細設計を実施</p>
+                        <h3 data-lang-key="eng-process-design">設計</h3>
+                        <p data-lang-key="eng-process-design-desc">システムアーキテクチャ、UI/UX、データベース設計など、詳細設計を実施</p>
                         <div class="step-features">
-                            <span>システム設計</span>
-                            <span>UI/UX設計</span>
-                            <span>DB設計</span>
+                            <span data-lang-key="eng-tag-system-design">システム設計</span>
+                            <span data-lang-key="eng-tag-ui-ux-design">UI/UX設計</span>
+                            <span data-lang-key="eng-tag-db-design">DB設計</span>
                         </div>
                     </div>
                 </div>
@@ -193,12 +193,12 @@
                         </div>
                     </div>
                     <div class="step-content">
-                        <h3>開発</h3>
-                        <p>アジャイル開発手法を採用し、反復的にシステムを構築</p>
+                        <h3 data-lang-key="eng-process-development">開発</h3>
+                        <p data-lang-key="eng-process-development-desc">アジャイル開発手法を採用し、反復的にシステムを構築</p>
                         <div class="step-features">
-                            <span>アジャイル開発</span>
-                            <span>コードレビュー</span>
-                            <span>品質管理</span>
+                            <span data-lang-key="eng-tag-agile-dev">アジャイル開発</span>
+                            <span data-lang-key="eng-tag-code-review-process">コードレビュー</span>
+                            <span data-lang-key="eng-tag-quality-mgmt">品質管理</span>
                         </div>
                     </div>
                 </div>
@@ -211,12 +211,12 @@
                         </div>
                     </div>
                     <div class="step-content">
-                        <h3>テスト</h3>
-                        <p>単体テスト、結合テスト、システムテストを実施し、品質を保証</p>
+                        <h3 data-lang-key="eng-process-testing">テスト</h3>
+                        <p data-lang-key="eng-process-testing-desc">単体テスト、結合テスト、システムテストを実施し、品質を保証</p>
                         <div class="step-features">
-                            <span>単体テスト</span>
-                            <span>結合テスト</span>
-                            <span>品質保証</span>
+                            <span data-lang-key="eng-tag-unit-test">単体テスト</span>
+                            <span data-lang-key="eng-tag-integration-test">結合テスト</span>
+                            <span data-lang-key="eng-tag-quality-assurance">品質保証</span>
                         </div>
                     </div>
                 </div>
@@ -229,12 +229,12 @@
                         </div>
                     </div>
                     <div class="step-content">
-                        <h3>運用保守</h3>
-                        <p>リリース後の運用監視、保守メンテナンス、機能追加に対応</p>
+                        <h3 data-lang-key="eng-process-operations">運用保守</h3>
+                        <p data-lang-key="eng-process-operations-desc">リリース後の運用監視、保守メンテナンス、機能追加に対応</p>
                         <div class="step-features">
-                            <span>24/7監視</span>
-                            <span>保守対応</span>
-                            <span>機能追加</span>
+                            <span data-lang-key="eng-tag-24-7-monitoring">24/7監視</span>
+                            <span data-lang-key="eng-tag-maintenance">保守対応</span>
+                            <span data-lang-key="eng-tag-feature-addition">機能追加</span>
                         </div>
                     </div>
                 </div>
@@ -245,7 +245,7 @@
     <!-- Technology Stack Enhanced -->
     <section class="technology-section enhanced">
         <div class="container">
-            <h2 class="section-title">技術スタック & 資格保有</h2>
+            <h2 class="section-title" data-lang-key="eng-tech-stack">技術スタック & 資格保有</h2>
             
             <div class="tech-overview">
                 <div class="tech-stat">
@@ -268,7 +268,7 @@
 
             <div class="tech-grid">
                 <div class="tech-category">
-                    <h3>フロントエンド</h3>
+                    <h3 data-lang-key="eng-tech-frontend">フロントエンド</h3>
                     <div class="tech-items">
                         <span class="tech-item">React</span>
                         <span class="tech-item">Vue.js</span>
@@ -280,7 +280,7 @@
                 </div>
                 
                 <div class="tech-category">
-                    <h3>バックエンド</h3>
+                    <h3 data-lang-key="eng-tech-backend">バックエンド</h3>
                     <div class="tech-items">
                         <span class="tech-item">Java</span>
                         <span class="tech-item">C#</span>
@@ -292,7 +292,7 @@
                 </div>
                 
                 <div class="tech-category">
-                    <h3>モバイル</h3>
+                    <h3 data-lang-key="eng-tech-mobile">モバイル</h3>
                     <div class="tech-items">
                         <span class="tech-item">React Native</span>
                         <span class="tech-item">Flutter</span>
@@ -304,7 +304,7 @@
                 </div>
                 
                 <div class="tech-category">
-                    <h3>データベース</h3>
+                    <h3 data-lang-key="eng-tech-database">データベース</h3>
                     <div class="tech-items">
                         <span class="tech-item">PostgreSQL</span>
                         <span class="tech-item">MySQL</span>
@@ -316,7 +316,7 @@
                 </div>
                 
                 <div class="tech-category">
-                    <h3>クラウド・インフラ</h3>
+                    <h3 data-lang-key="eng-tech-cloud">クラウド・インフラ</h3>
                     <div class="tech-items">
                         <span class="tech-item">AWS</span>
                         <span class="tech-item">Microsoft Azure</span>
@@ -328,7 +328,7 @@
                 </div>
                 
                 <div class="tech-category">
-                    <h3>開発ツール</h3>
+                    <h3 data-lang-key="eng-tech-tools">開発ツール</h3>
                     <div class="tech-items">
                         <span class="tech-item">Git</span>
                         <span class="tech-item">Jenkins</span>
@@ -345,38 +345,38 @@
     <!-- Quality Assurance -->
     <section class="quality-assurance">
         <div class="container">
-            <h2 class="section-title">品質保証</h2>
+            <h2 class="section-title" data-lang-key="eng-quality-assurance">品質保証</h2>
             <div class="qa-grid">
                 <div class="qa-item">
                     <div class="qa-icon">
                         <i class="fas fa-code-branch"></i>
                     </div>
-                    <h3>コード品質管理</h3>
-                    <p>コードレビュー、静的解析、単体テストカバレッジにより高品質なコードを保証します。</p>
+                    <h3 data-lang-key="eng-qa-code">コード品質管理</h3>
+                    <p data-lang-key="eng-qa-code-desc">コードレビュー、静的解析、単体テストカバレッジにより高品質なコードを保証します。</p>
                 </div>
                 
                 <div class="qa-item">
                     <div class="qa-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>セキュリティテスト</h3>
-                    <p>脆弱性診断、ペネトレーションテストによりセキュリティリスクを最小化します。</p>
+                    <h3 data-lang-key="eng-qa-security">セキュリティテスト</h3>
+                    <p data-lang-key="eng-qa-security-desc">脆弱性診断、ペネトレーションテストによりセキュリティリスクを最小化します。</p>
                 </div>
                 
                 <div class="qa-item">
                     <div class="qa-icon">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
-                    <h3>パフォーマンステスト</h3>
-                    <p>負荷テスト、ストレステストによりシステムの性能を検証します。</p>
+                    <h3 data-lang-key="eng-qa-performance">パフォーマンステスト</h3>
+                    <p data-lang-key="eng-qa-performance-desc">負荷テスト、ストレステストによりシステムの性能を検証します。</p>
                 </div>
                 
                 <div class="qa-item">
                     <div class="qa-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>ユーザビリティテスト</h3>
-                    <p>実際のユーザー視点でのテストにより、使いやすさを追求します。</p>
+                    <h3 data-lang-key="eng-qa-usability">ユーザビリティテスト</h3>
+                    <p data-lang-key="eng-qa-usability-desc">実際のユーザー視点でのテストにより、使いやすさを追求します。</p>
                 </div>
             </div>
         </div>
@@ -385,19 +385,19 @@
     <!-- Project Management -->
     <section class="project-management">
         <div class="container">
-            <h2 class="section-title">プロジェクト管理手法</h2>
+            <h2 class="section-title" data-lang-key="eng-pm-methods">プロジェクト管理手法</h2>
             <div class="pm-methods">
                 <div class="pm-method">
                     <div class="pm-icon">
                         <i class="fas fa-sync"></i>
                     </div>
-                    <h3>アジャイル開発</h3>
-                    <p>スクラム・カンバン手法による反復的開発で、変化する要求に柔軟に対応します。</p>
+                    <h3 data-lang-key="eng-pm-agile">アジャイル開発</h3>
+                    <p data-lang-key="eng-pm-agile-desc">スクラム・カンバン手法による反復的開発で、変化する要求に柔軟に対応します。</p>
                     <ul>
-                        <li>2週間スプリント</li>
-                        <li>デイリースタンドアップ</li>
-                        <li>スプリントレビュー</li>
-                        <li>レトロスペクティブ</li>
+                        <li data-lang-key="eng-pm-2week-sprint">2週間スプリント</li>
+                        <li data-lang-key="eng-pm-daily-standup">デイリースタンドアップ</li>
+                        <li data-lang-key="eng-pm-sprint-review">スプリントレビュー</li>
+                        <li data-lang-key="eng-pm-retrospective">レトロスペクティブ</li>
                     </ul>
                 </div>
                 
@@ -405,13 +405,13 @@
                     <div class="pm-icon">
                         <i class="fas fa-infinity"></i>
                     </div>
-                    <h3>DevOps</h3>
-                    <p>CI/CDパイプラインによる自動化で、迅速かつ安定したソフトウェアデリバリーを実現します。</p>
+                    <h3 data-lang-key="eng-pm-devops">DevOps</h3>
+                    <p data-lang-key="eng-pm-devops-desc">CI/CDパイプラインによる自動化で、迅速かつ安定したソフトウェアデリバリーを実現します。</p>
                     <ul>
-                        <li>自動ビルド・テスト</li>
-                        <li>自動デプロイ</li>
-                        <li>インフラ as Code</li>
-                        <li>監視・ログ管理</li>
+                        <li data-lang-key="eng-pm-auto-build">自動ビルド・テスト</li>
+                        <li data-lang-key="eng-pm-auto-deploy">自動デプロイ</li>
+                        <li data-lang-key="eng-pm-iac">インフラ as Code</li>
+                        <li data-lang-key="eng-pm-monitoring-logs">監視・ログ管理</li>
                     </ul>
                 </div>
             </div>
@@ -421,7 +421,7 @@
     <!-- Enhanced Case Studies -->
     <section class="case-studies enhanced">
         <div class="container">
-            <h2 class="section-title">導入実績 & 大型プロジェクト</h2>
+            <h2 class="section-title" data-lang-key="eng-case-studies">導入実績 & 大型プロジェクト</h2>
             
             <!-- Major Projects Timeline -->
             <div class="projects-timeline">
@@ -430,9 +430,9 @@
                         <i class="fas fa-university"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>メガバンク次期基盤構築</h4>
-                        <p>AWS共通基盤構築・運用保守</p>
-                        <span class="project-scale">延べ100+人月（継続中）</span>
+                        <h4 data-lang-key="eng-case-megabank">メガバンク次期基盤構築</h4>
+                        <p data-lang-key="eng-case-megabank-desc">AWS共通基盤構築・運用保守</p>
+                        <span class="project-scale" data-lang-key="eng-scale-100-months-ongoing">延べ100+人月（継続中）</span>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -440,9 +440,9 @@
                         <i class="fas fa-truck-loading"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>物流システム最適化</h4>
-                        <p>AWS WMSシステム・画像認識PoC</p>
-                        <span class="project-scale">延べ200+人月（継続中）</span>
+                        <h4 data-lang-key="eng-case-logistics">物流システム最適化</h4>
+                        <p data-lang-key="eng-case-logistics-desc">AWS WMSシステム・画像認識PoC</p>
+                        <span class="project-scale" data-lang-key="eng-scale-200-months-ongoing">延べ200+人月（継続中）</span>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -450,9 +450,9 @@
                         <i class="fas fa-heartbeat"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>上場医療データ専門会社</h4>
-                        <p>ビッグデータ分析基盤構築</p>
-                        <span class="project-scale">延べ100+人月（継続中）</span>
+                        <h4 data-lang-key="eng-case-medical">上場医療データ専門会社</h4>
+                        <p data-lang-key="eng-case-medical-desc">ビッグデータ分析基盤構築</p>
+                        <span class="project-scale" data-lang-key="eng-scale-100-months-ongoing">延べ100+人月（継続中）</span>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -460,9 +460,9 @@
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>ECプラットフォーム構築</h4>
-                        <p>中堅アパレル企業のオンライン販売チャネル</p>
-                        <span class="project-scale">延べ50+人月（完了）</span>
+                        <h4 data-lang-key="eng-case-ecommerce">ECプラットフォーム構築</h4>
+                        <p data-lang-key="eng-case-ecommerce-desc">中堅アパレル企業のオンライン販売チャネル</p>
+                        <span class="project-scale" data-lang-key="eng-scale-50-months-completed">延べ50+人月（完了）</span>
                     </div>
                 </div>
             </div>
@@ -474,13 +474,13 @@
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <div class="case-content">
-                        <h3>中堅アパレル企業様</h3>
-                        <h4>ECサイト構築</h4>
-                        <p>従来の店舗販売に加えて、オンライン販売チャネルを新規構築。React + Node.js構成で高性能なECサイトを開発し、売上30%向上を実現。</p>
+                        <h3 data-lang-key="case-apparel-title">中堅アパレル企業様</h3>
+                        <h4 data-lang-key="case-apparel-service">ECサイト構築</h4>
+                        <p data-lang-key="case-apparel-desc">従来の店舗販売に加えて、オンライン販売チャネルを新規構築。React + Node.js構成で高性能なECサイトを開発し、売上30%向上を実現。</p>
                         <div class="case-results">
-                            <span class="result-item">売上30%向上</span>
-                            <span class="result-item">開発期間4ヶ月</span>
-                            <span class="result-item">モバイル対応</span>
+                            <span class="result-item" data-lang-key="case-apparel-result1">売上30%向上</span>
+                            <span class="result-item" data-lang-key="case-apparel-result2">開発期間4ヶ月</span>
+                            <span class="result-item" data-lang-key="case-apparel-result3">モバイル対応</span>
                         </div>
                     </div>
                 </div>
@@ -490,13 +490,13 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="case-content">
-                        <h3>製造業大手様</h3>
-                        <h4>基幹システム刷新</h4>
-                        <p>20年使用していたレガシーシステムをクラウドネイティブなマイクロサービス架構に刷新。運用コスト50%削減と処理性能10倍向上を達成。</p>
+                        <h3 data-lang-key="case-manufacturing-title">製造業大手様</h3>
+                        <h4 data-lang-key="case-manufacturing-service">基幹システム刷新</h4>
+                        <p data-lang-key="case-manufacturing-desc">20年使用していたレガシーシステムをクラウドネイティブなマイクロサービス架構に刷新。運用コスト50%削減と処理性能10倍向上を達成。</p>
                         <div class="case-results">
-                            <span class="result-item">運用コスト50%削減</span>
-                            <span class="result-item">処理性能10倍向上</span>
-                            <span class="result-item">可用性99.9%</span>
+                            <span class="result-item" data-lang-key="case-manufacturing-result1">運用コスト50%削減</span>
+                            <span class="result-item" data-lang-key="case-manufacturing-result2">処理性能10倍向上</span>
+                            <span class="result-item" data-lang-key="case-manufacturing-result3">可用性99.9%</span>
                         </div>
                     </div>
                 </div>
@@ -506,13 +506,13 @@
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="case-content">
-                        <h3>フィンテック企業様</h3>
-                        <h4>モバイルアプリ開発</h4>
-                        <p>金融サービス向けモバイルアプリをReact Nativeで開発。高いセキュリティ要件をクリアし、iOS・Android同時リリースでユーザー獲得を加速。</p>
+                        <h3 data-lang-key="case-fintech-title">フィンテック企業様</h3>
+                        <h4 data-lang-key="case-fintech-service">モバイルアプリ開発</h4>
+                        <p data-lang-key="case-fintech-desc">金融サービス向けモバイルアプリをReact Nativeで開発。高いセキュリティ要件をクリアし、iOS・Android同時リリースでユーザー獲得を加速。</p>
                         <div class="case-results">
-                            <span class="result-item">同時リリース実現</span>
-                            <span class="result-item">高セキュリティ対応</span>
-                            <span class="result-item">ユーザー評価4.8点</span>
+                            <span class="result-item" data-lang-key="case-fintech-result1">同時リリース実現</span>
+                            <span class="result-item" data-lang-key="case-fintech-result2">高セキュリティ対応</span>
+                            <span class="result-item" data-lang-key="case-fintech-result3">ユーザー評価4.8点</span>
                         </div>
                     </div>
                 </div>
@@ -522,13 +522,13 @@
                         <i class="fas fa-cloud"></i>
                     </div>
                     <div class="case-content">
-                        <h3>ネット金融サービス様</h3>
-                        <h4>AWSクラウド基盤構築</h4>
-                        <p>CI/CD自動化を含むクラウド基盤を構築。IaCによるインフラ自動化で運用効率を大幅改善し、24/7監視体制を実現。</p>
+                        <h3 data-lang-key="case-financial-title">ネット金融サービス様</h3>
+                        <h4 data-lang-key="case-financial-service">AWSクラウド基盤構築</h4>
+                        <p data-lang-key="case-financial-desc">CI/CD自動化を含むクラウド基盤を構築。IaCによるインフラ自動化で運用効率を大幅改善し、24/7監視体制を実現。</p>
                         <div class="case-results">
-                            <span class="result-item">デプロイ時間90%短縮</span>
-                            <span class="result-item">可用性99.99%</span>
-                            <span class="result-item">運用コスト50%削減</span>
+                            <span class="result-item" data-lang-key="case-financial-result1">デプロイ時間90%短縮</span>
+                            <span class="result-item" data-lang-key="case-financial-result2">可用性99.99%</span>
+                            <span class="result-item" data-lang-key="case-financial-result3">運用コスト50%削減</span>
                         </div>
                     </div>
                 </div>
@@ -540,14 +540,14 @@
     <section class="contact-cta enhanced">
         <div class="container">
             <div class="cta-content">
-                <h2>エンジニアリングサービスで未来を構築する</h2>
-                <p>
+                <h2 data-lang-key="eng-cta-title">エンジニアリングサービスで未来を構築する</h2>
+                <p data-lang-key="eng-cta-desc">
                     最先端の開発技術と豊富な実績で、お客様のシステム開発課題を革新的に解決します。<br>
                     まずは貴社の課題をお聞かせください。最適なソリューションをご提案いたします。
                 </p>
                 <div class="cta-buttons">
-                    <a href="index.html#contact" class="cta-button primary">お問い合わせ</a>
-                    <a href="#" class="cta-button secondary">技術資料ダウンロード</a>
+                    <a href="index.html#contact" class="cta-button primary" data-lang-key="eng-cta-contact">お問い合わせ</a>
+                    <a href="#" class="cta-button secondary" data-lang-key="eng-cta-download">技術資料ダウンロード</a>
                 </div>
             </div>
         </div>

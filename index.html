@@ -390,13 +390,13 @@
            </ul>
            <div class="language-switcher">
                <button class="lang-btn active" data-lang="ja" title="日本語">
-                   <img src="images/japanese.png" alt="日本語" class="flag-image">
+                   <span class="lang-text">JP</span>
                </button>
                <button class="lang-btn" data-lang="en" title="English">
-                   <img src="images/english.png" alt="English" class="flag-image">
+                   <span class="lang-text">EN</span>
                </button>
                <button class="lang-btn" data-lang="zh" title="中文">
-                   <img src="images/chinese.png" alt="中文" class="flag-image">
+                   <span class="lang-text">CN</span>
                </button>
            </div>
        </nav>
@@ -593,7 +593,7 @@
                    </div>
                    <div class="company-item">
                        <div class="company-label" data-lang-key="company-capital-label">資本金</div>
-                       <div class="company-value" data-lang-key="company-capital-value">4,500万円</div>
+                       <div class="company-value" data-lang-key="company-capital-value">2,000万円</div>
                    </div>
                    <div class="company-item">
                        <div class="company-label" data-lang-key="company-ceo-label">代表者</div>
@@ -887,27 +887,27 @@
                                <div class="salary-category-title" data-lang-key="recruit-salary-new">新卒</div>
                                <div class="salary-table">
                                    <div class="salary-row">
-                                       <span>大学院卒</span>
+                                       <span data-lang-key="edu-graduate">大学院卒</span>
                                        <span class="salary-amount">206,400円～</span>
                                    </div>
                                    <div class="salary-row">
-                                       <span>大学卒</span>
+                                       <span data-lang-key="edu-university">大学卒</span>
                                        <span class="salary-amount">197,200円～</span>
                                    </div>
                                    <div class="salary-row">
-                                       <span>短大卒</span>
+                                       <span data-lang-key="edu-college">短大卒</span>
                                        <span class="salary-amount">178,900円～</span>
                                    </div>
                                    <div class="salary-row">
-                                       <span>専門卒（4年制）</span>
+                                       <span data-lang-key="edu-vocational-4y">専門卒（4年制）</span>
                                        <span class="salary-amount">197,200円～</span>
                                    </div>
                                    <div class="salary-row">
-                                       <span>専門卒</span>
+                                       <span data-lang-key="edu-vocational">専門卒</span>
                                        <span class="salary-amount">188,100円～</span>
                                    </div>
                                    <div class="salary-row">
-                                       <span>高卒</span>
+                                       <span data-lang-key="edu-high-school">高卒</span>
                                        <span class="salary-amount">169,700円～</span>
                                    </div>
                                </div>
@@ -1014,61 +1014,61 @@
            </div>
 
            <div class="entry-form scroll-animate">
-               <h3 class="form-title">エントリーフォーム</h3>
+               <h3 class="form-title" data-lang-key="form-title">エントリーフォーム</h3>
                
                <form id="entryForm">
                    <div class="form-group">
-                       <label class="form-label">氏名 <span class="required">*</span></label>
+                       <label class="form-label"><span data-lang-key="form-name">氏名</span> <span class="required">*</span></label>
                        <input type="text" class="form-input" required>
                    </div>
                    
                    <div class="form-group">
-                       <label class="form-label">ふりがな <span class="required">*</span></label>
+                       <label class="form-label"><span data-lang-key="form-furigana">ふりがな</span> <span class="required">*</span></label>
                        <input type="text" class="form-input" required>
                    </div>
                    
                    <div class="form-group">
-                       <label class="form-label">メールアドレス <span class="required">*</span></label>
+                       <label class="form-label"><span data-lang-key="form-email">メールアドレス</span> <span class="required">*</span></label>
                        <input type="email" class="form-input" required>
                    </div>
                    
                    <div class="form-group">
-                       <label class="form-label">電話番号 <span class="required">*</span></label>
+                       <label class="form-label"><span data-lang-key="form-phone">電話番号</span> <span class="required">*</span></label>
                        <input type="tel" class="form-input" required>
                    </div>
                    
                    <div class="form-group">
-                       <label class="form-label">自由記入欄</label>
-                       <textarea class="form-input form-textarea" placeholder="志望動機、経験、スキル等をご記入ください"></textarea>
+                       <label class="form-label"><span data-lang-key="form-free-input">自由記入欄</span></label>
+                       <textarea class="form-input form-textarea" data-lang-key="form-placeholder" placeholder="志望動機、経験、スキル等をご記入ください"></textarea>
                    </div>
                    
                    <div class="privacy-policy">
-                       <h4>個人情報の取扱いについて</h4>
-                       <p>応募時に記載いただく個人情報は、弊社の個人情報保護マネジメントシステムに基づき取り扱いさせていただきます。</p>
-                       <p>１．個人情報は、採用目的のためです。</p>
-                       <p>２．個人情報管理責任者は、代表取締役です。</p>
-                       <p>３．第三者への提供は行いません。</p>
-                       <p>４．個人情報の処理のための外部委託は、機密保持契約を締結している会社とします。</p>
-                       <p>５．弊社に個人情報を提供されることは任意ですが、記載内容に不備があった場合に、連絡が取れない場合があります。</p>
-                       <p>６．弊社に提供した個人情報に関して、開示等の請求は、下記まで御連絡下さい。</p>
-                       <p class="consent-instruction">同意される場合、下記にチェック願います。</p>
-                       <p class="consent-warning">※下記にチェックされない場合、確認画面に進めません。</p>
+                       <h4 data-lang-key="privacy-title">個人情報の取扱いについて</h4>
+                       <p data-lang-key="privacy-p1">応募時に記載いただく個人情報は、弊社の個人情報保護マネジメントシステムに基づき取り扱いさせていただきます。</p>
+                       <p data-lang-key="privacy-p2">１．個人情報は、採用目的のためです。</p>
+                       <p data-lang-key="privacy-p3">２．個人情報管理責任者は、代表取締役です。</p>
+                       <p data-lang-key="privacy-p4">３．第三者への提供は行いません。</p>
+                       <p data-lang-key="privacy-p5">４．個人情報の処理のための外部委託は、機密保持契約を締結している会社とします。</p>
+                       <p data-lang-key="privacy-p6">５．弊社に個人情報を提供されることは任意ですが、記載内容に不備があった場合に、連絡が取れない場合があります。</p>
+                       <p data-lang-key="privacy-p7">６．弊社に提供した個人情報に関して、開示等の請求は、下記まで御連絡下さい。</p>
+                       <p class="consent-instruction" data-lang-key="consent-instruction">同意される場合、下記にチェック願います。</p>
+                       <p class="consent-warning" data-lang-key="consent-warning">※下記にチェックされない場合、確認画面に進めません。</p>
                    </div>
                    
                    <div class="checkbox-container">
                        <input type="checkbox" id="privacyConsent" class="checkbox-input" required>
                        <label for="privacyConsent" class="checkbox-label">
-                           <strong class="consent-text">私は上記「個人情報の取り扱いについて」に同意する</strong>
+                           <strong class="consent-text" data-lang-key="consent-text">私は上記「個人情報の取り扱いについて」に同意する</strong>
                        </label>
                    </div>
                    
-                   <button type="submit" class="submit-button" id="submitBtn" disabled>確認画面へ</button>
+                   <button type="submit" class="submit-button" id="submitBtn" data-lang-key="submit-button" disabled>確認画面へ</button>
                </form>
                
                <div class="form-footer">
-                   <strong class="company-name">テラボックス株式会社</strong><br>
-                   〒104-0045 東京都中央区築地6丁目17-4 リードシー築地ビル 4F<br>
-                   TEL 03-5542-7798
+                   <strong class="company-name" data-lang-key="form-footer-company">テラボックス株式会社</strong><br>
+                   <span data-lang-key="form-footer-address">〒104-0045 東京都中央区築地6丁目17-4 リードシー築地ビル 4F</span><br>
+                   <span data-lang-key="form-footer-tel">TEL 03-5542-7798</span>
                </div>
            </div>
        </div>

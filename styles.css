@@ -152,24 +152,41 @@ body {
     transition: all 0.3s;
     width: 50px;
     height: 40px;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .lang-btn:hover {
     border-color: #9FD500;
     background: rgba(159, 213, 0, 0.1);
+    color: #9FD500;
 }
 
 .lang-btn.active {
     border-color: #9FD500;
     background: #9FD500;
+    color: #000;
 }
 
-.flag-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 2px;
+.lang-text {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover .lang-text {
+    transform: scale(1.1);
+}
+
+.lang-btn.active .lang-text {
+    color: #000;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 /* ==================== Hero Section ==================== */
