@@ -28,6 +28,19 @@
            margin-right: 72px !important;
        }
        
+       /* New logo image styles */
+       .logo-image {
+           height: 90px !important;
+           width: auto !important;
+           transition: all 0.3s ease;
+           filter: brightness(1.1);
+       }
+       
+       .logo:hover .logo-image {
+           transform: scale(1.05);
+           filter: brightness(1.3);
+       }
+       
        /* Adjust header for wider navigation */
        .header {
            padding: 25px 0;
@@ -155,6 +168,9 @@
            body .logo {
                margin-right: 54px !important;
            }
+           .logo-image {
+               height: 75px !important;
+           }
        }
        
        @media (max-width: 768px) {
@@ -173,6 +189,9 @@
            }
            body .logo {
                margin-right: 36px !important;
+           }
+           .logo-image {
+               height: 68px !important;
            }
        }
 	   
@@ -375,8 +394,7 @@
    <header class="header">
        <nav class="nav">
            <a href="#" class="logo">
-               <img src="images/logo.svg" alt="Terabox Logo" class="logo-icon">
-               TERABOX
+               <img src="images/logo-original-black.png" alt="Terabox Logo" class="logo-image">
            </a>
            <ul class="nav-links">
                <li><a href="#strength" data-lang-key="nav-strength">当社の強み</a></li>

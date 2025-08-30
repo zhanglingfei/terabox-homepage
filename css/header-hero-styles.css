@@ -92,16 +92,16 @@
     gap: 15px;
 }
 
-.logo-icon {
-    width: 40px;
-    height: 40px;
+.logo-image {
+    height: 90px;
+    width: auto;
     transition: all 0.3s ease;
-    filter: brightness(1);
+    filter: brightness(1.1);
 }
 
-.logo:hover .logo-icon {
-    transform: scale(1.1) rotate(5deg);
-    filter: brightness(1.2);
+.logo:hover .logo-image {
+    transform: scale(1.05);
+    filter: brightness(1.3);
 }
 
 .nav-links {
@@ -531,6 +531,12 @@
 }
 
 /* Responsive Design for Header and Hero */
+@media (max-width: 1024px) {
+    .logo-image {
+        height: 75px;
+    }
+}
+
 @media (max-width: 768px) {
     .lang-text {
         font-size: 12px;
@@ -542,6 +548,10 @@
     
     .nav-links a {
         font-size: 16px;
+    }
+    
+    .logo-image {
+        height: 68px;
     }
     
     .hero-content {
@@ -587,6 +597,10 @@
     
     .language-switcher {
         margin-left: 0;
+    }
+    
+    .logo-image {
+        height: 63px;
     }
     
     .hero-text {
