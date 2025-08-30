@@ -6,31 +6,36 @@
     <title>Blockchain & Web3事業 - TERABOX</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="blockchain-web3.css">
+    <link rel="stylesheet" href="business-pages.css">
+    <link rel="stylesheet" href="blockchain-web3.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <a href="index.html" class="logo">TERABOX</a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Terabox Logo" class="logo-icon">
+                TERABOX
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html#news" data-lang-key="nav-news">お知らせ</a></li>
+                <li><a href="index.html#strength" data-lang-key="nav-strength">当社の強み</a></li>
+                <li><a href="index.html#business-news" data-lang-key="nav-business-news">業務新聞</a></li>
                 <li><a href="index.html#company" data-lang-key="nav-company">会社概要</a></li>
                 <li><a href="index.html#message" data-lang-key="nav-message">代表挨拶</a></li>
                 <li><a href="index.html#business" data-lang-key="nav-business">事業内容</a></li>
+                <li><a href="index.html#cases" data-lang-key="nav-cases">導入実績</a></li>
                 <li><a href="index.html#recruit" data-lang-key="nav-recruit">採用情報</a></li>
-                <li><a href="index.html#access" data-lang-key="nav-access">アクセス</a></li>
                 <li><a href="index.html#contact" data-lang-key="nav-contact">お問い合わせ</a></li>
             </ul>
             <div class="language-switcher">
                 <button class="lang-btn active" data-lang="ja" title="日本語">
-                    <img src="images/japanese.png" alt="日本語" class="flag-image">
+                    <span class="lang-text">JP</span>
                 </button>
                 <button class="lang-btn" data-lang="en" title="English">
-                    <img src="images/english.png" alt="English" class="flag-image">
+                    <span class="lang-text">EN</span>
                 </button>
                 <button class="lang-btn" data-lang="zh" title="中文">
-                    <img src="images/chinese.png" alt="中文" class="flag-image">
+                    <span class="lang-text">CN</span>
                 </button>
             </div>
         </nav>
@@ -43,16 +48,16 @@
                 <div class="business-icon-large">
                     <i class="fas fa-link"></i>
                 </div>
-                <h1 class="business-hero-title">Blockchain & Web3事業</h1>
-                <p class="business-hero-subtitle">Next Generation Web3 Technology</p>
-                <p class="business-hero-description">
+                <h1 class="business-hero-title" data-lang-key="blockchain-title">Blockchain & Web3事業</h1>
+                <p class="business-hero-subtitle" data-lang-key="blockchain-subtitle">Next Generation Web3 Technology</p>
+                <p class="business-hero-description" data-lang-key="blockchain-description">
                     2016年から蓄積してきた豊富な開発実績と技術力で、次世代Web3ソリューションを提供。<br>
                     エンタープライズ向けブロックチェーンから公链開発まで、幅広い領域をカバーします。
                 </p>
                 <div class="hero-achievements">
-                    <span class="achievement-badge">🏆 Cosmos国際ハッカソン2020 二等賞</span>
-                    <span class="achievement-badge">🔐 上海銀行票据プラットフォーム実装</span>
-                    <span class="achievement-badge">⚡ 9年以上の実績</span>
+                    <span class="achievement-badge" data-lang-key="blockchain-achievement1">🏆 Cosmos国際ハッカソン2020 二等賞</span>
+                    <span class="achievement-badge" data-lang-key="blockchain-achievement2">🔐 上海銀行票据プラットフォーム実装</span>
+                    <span class="achievement-badge" data-lang-key="blockchain-achievement3">⚡ 9年以上の実績</span>
                 </div>
             </div>
         </div>
@@ -61,17 +66,17 @@
     <!-- Development Timeline -->
     <section class="development-timeline">
         <div class="container">
-            <h2 class="section-title">開発実績・技術革新の歩み</h2>
+            <h2 class="section-title" data-lang-key="timeline-title">開発実績・技術革新の歩み</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">2016-2017</div>
                     <div class="timeline-content">
-                        <h3>基礎技術研究フェーズ</h3>
-                        <p>ブロックチェーン技術の調査研究開始。分散型システムアーキテクチャの設計と基礎インフラ構築。</p>
+                        <h3 data-lang-key="timeline-2016-title">基礎技術研究フェーズ</h3>
+                        <p data-lang-key="timeline-2016-desc">ブロックチェーン技術の調査研究開始。分散型システムアーキテクチャの設計と基礎インフラ構築。</p>
                         <ul class="timeline-tech">
-                            <li>分散ファイルシステム（Seaweedfs）</li>
-                            <li>ログ収集・分析基盤</li>
-                            <li>マイクロサービスアーキテクチャ</li>
+                            <li data-lang-key="timeline-2016-tech1">分散ファイルシステム（Seaweedfs）</li>
+                            <li data-lang-key="timeline-2016-tech2">ログ収集・分析基盤</li>
+                            <li data-lang-key="timeline-2016-tech3">マイクロサービスアーキテクチャ</li>
                         </ul>
                     </div>
                 </div>
@@ -79,12 +84,12 @@
                 <div class="timeline-item">
                     <div class="timeline-date">2018</div>
                     <div class="timeline-content">
-                        <h3>エンタープライズブロックチェーン実装</h3>
-                        <p><strong>上海銀行との協業プロジェクト</strong> - Hyperledger Fabricを活用した票据取引プラットフォームの設計・実装に成功。</p>
+                        <h3 data-lang-key="timeline-2018-title">エンタープライズブロックチェーン実装</h3>
+                        <p data-lang-key="timeline-2018-desc"><strong>上海銀行との協業プロジェクト</strong> - Hyperledger Fabricを活用した票据取引プラットフォームの設計・実装に成功。</p>
                         <ul class="timeline-tech">
-                            <li>Hyperledger Fabric 0.6 & 1.1</li>
-                            <li>Mesos + Docker クラウド管理</li>
-                            <li>銀行グレードのセキュリティ実装</li>
+                            <li data-lang-key="timeline-2018-tech1">Hyperledger Fabric 0.6 & 1.1</li>
+                            <li data-lang-key="timeline-2018-tech2">Mesos + Docker クラウド管理</li>
+                            <li data-lang-key="timeline-2018-tech3">銀行グレードのセキュリティ実装</li>
                         </ul>
                     </div>
                 </div>
@@ -92,13 +97,13 @@
                 <div class="timeline-item">
                     <div class="timeline-date">2018-2019</div>
                     <div class="timeline-content">
-                        <h3>パブリックチェーン開発</h3>
-                        <p>独自公链の研究開発。Ethereum及びCosmosベースの公链実装、テストネット・メインネット運用。</p>
+                        <h3 data-lang-key="timeline-2019-title">パブリックチェーン開発</h3>
+                        <p data-lang-key="timeline-2019-desc">独自公链の研究開発。Ethereum及びCosmosベースの公链実装、テストネット・メインネット運用。</p>
                         <ul class="timeline-tech">
-                            <li>Ethereum & Solidity スマートコントラクト</li>
-                            <li>Tendermint/Cosmos-SDK フレームワーク</li>
-                            <li>コンセンサスメカニズム設計</li>
-                            <li>P2Pネットワーク最適化</li>
+                            <li data-lang-key="timeline-2019-tech1">Ethereum & Solidity スマートコントラクト</li>
+                            <li data-lang-key="timeline-2019-tech2">Tendermint/Cosmos-SDK フレームワーク</li>
+                            <li data-lang-key="timeline-2019-tech3">コンセンサスメカニズム設計</li>
+                            <li data-lang-key="timeline-2019-tech4">P2Pネットワーク最適化</li>
                         </ul>
                     </div>
                 </div>
@@ -106,13 +111,13 @@
                 <div class="timeline-item highlight">
                     <div class="timeline-date">2020</div>
                     <div class="timeline-content">
-                        <h3>🏆 国際的認知獲得</h3>
-                        <p><strong>Cosmos & Tendermint国際ハッカソン2020 二等賞受賞</strong><br>
+                        <h3 data-lang-key="timeline-2020-title">🏆 国際的認知獲得</h3>
+                        <p data-lang-key="timeline-2020-desc"><strong>Cosmos & Tendermint国際ハッカソン2020 二等賞受賞</strong><br>
                         「Flares - マルチアセット決済ネットワーク」プロジェクトで革新的なクロスチェーン技術を実証。</p>
                         <ul class="timeline-tech">
-                            <li>クロスチェーン技術 (Cassini)</li>
-                            <li>マルチアセット支払いネットワーク</li>
-                            <li>GitHub: wangfeiping/flares</li>
+                            <li data-lang-key="timeline-2020-tech1">クロスチェーン技術 (Cassini)</li>
+                            <li data-lang-key="timeline-2020-tech2">マルチアセット支払いネットワーク</li>
+                            <li data-lang-key="timeline-2020-tech3">GitHub: wangfeiping/flares</li>
                         </ul>
                     </div>
                 </div>
@@ -120,13 +125,13 @@
                 <div class="timeline-item">
                     <div class="timeline-date">2020-2023</div>
                     <div class="timeline-content">
-                        <h3>DeFi & スマートコントラクト専門化</h3>
-                        <p>EthereumとTron上でのDeFiプロトコル開発。中央集権型暗号資産カストディサービスの構築。</p>
+                        <h3 data-lang-key="timeline-2023-title">DeFi & スマートコントラクト専門化</h3>
+                        <p data-lang-key="timeline-2023-desc">EthereumとTron上でのDeFiプロトコル開発。中央集権型暗号資産カストディサービスの構築。</p>
                         <ul class="timeline-tech">
-                            <li>Solidity高度なスマートコントラクト</li>
-                            <li>マルチチェーン対応ウォレット</li>
-                            <li>セキュアな鍵管理システム</li>
-                            <li>Python チェーンデータ分析</li>
+                            <li data-lang-key="timeline-2023-tech1">Solidity高度なスマートコントラクト</li>
+                            <li data-lang-key="timeline-2023-tech2">マルチチェーン対応ウォレット</li>
+                            <li data-lang-key="timeline-2023-tech3">セキュアな鍵管理システム</li>
+                            <li data-lang-key="timeline-2023-tech4">Python チェーンデータ分析</li>
                         </ul>
                     </div>
                 </div>
@@ -134,13 +139,13 @@
                 <div class="timeline-item current">
                     <div class="timeline-date">2024-現在</div>
                     <div class="timeline-content">
-                        <h3>次世代Web3イノベーション</h3>
-                        <p>AI駆動の量化戦略とブロックチェーン資産管理2.0の融合。最先端技術の研究開発を推進。</p>
+                        <h3 data-lang-key="timeline-current-title">次世代Web3イノベーション</h3>
+                        <p data-lang-key="timeline-current-desc">AI駆動の量化戦略とブロックチェーン資産管理2.0の融合。最先端技術の研究開発を推進。</p>
                         <ul class="timeline-tech">
-                            <li>暗号資産カストディ2.0</li>
-                            <li>AI量化取引アルゴリズム</li>
-                            <li>同態暗号・MPC技術</li>
-                            <li>ゼロ知識証明実装</li>
+                            <li data-lang-key="timeline-current-tech1">暗号資産カストディ2.0</li>
+                            <li data-lang-key="timeline-current-tech2">AI量化取引アルゴリズム</li>
+                            <li data-lang-key="timeline-current-tech3">同態暗号・MPC技術</li>
+                            <li data-lang-key="timeline-current-tech4">ゼロ知識証明実装</li>
                         </ul>
                     </div>
                 </div>
@@ -151,18 +156,18 @@
     <!-- Core Competencies -->
     <section class="core-competencies">
         <div class="container">
-            <h2 class="section-title">コア技術力</h2>
+            <h2 class="section-title" data-lang-key="competencies-title">コア技術力</h2>
             <div class="competency-grid">
                 <div class="competency-card">
                     <div class="competency-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
-                    <h3>実証済みの技術力</h3>
+                    <h3 data-lang-key="competency1-title">実証済みの技術力</h3>
                     <ul>
-                        <li>国際ハッカソン受賞実績</li>
-                        <li>金融機関との共同開発経験</li>
-                        <li>公链メインネット運用実績</li>
-                        <li>23年以上の開発経験</li>
+                        <li data-lang-key="competency1-item1">国際ハッカソン受賞実績</li>
+                        <li data-lang-key="competency1-item2">金融機関との共同開発経験</li>
+                        <li data-lang-key="competency1-item3">公链メインネット運用実績</li>
+                        <li data-lang-key="competency1-item4">23年以上の開発経験</li>
                     </ul>
                 </div>
 
@@ -170,12 +175,12 @@
                     <div class="competency-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>多様な技術スタック</h3>
+                    <h3 data-lang-key="competency2-title">多様な技術スタック</h3>
                     <ul>
-                        <li>Go, Java, Rust, Python</li>
-                        <li>Solidity スマートコントラクト</li>
-                        <li>Hyperledger, Cosmos, Ethereum</li>
-                        <li>暗号学・コンセンサスアルゴリズム</li>
+                        <li data-lang-key="competency2-item1">Go, Java, Rust, Python</li>
+                        <li data-lang-key="competency2-item2">Solidity スマートコントラクト</li>
+                        <li data-lang-key="competency2-item3">Hyperledger, Cosmos, Ethereum</li>
+                        <li data-lang-key="competency2-item4">暗号学・コンセンサスアルゴリズム</li>
                     </ul>
                 </div>
 
@@ -183,12 +188,12 @@
                     <div class="competency-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>高度なセキュリティ</h3>
+                    <h3 data-lang-key="competency3-title">高度なセキュリティ</h3>
                     <ul>
-                        <li>同態暗号技術</li>
-                        <li>マルチパーティ計算(MPC)</li>
-                        <li>ゼロ知識証明</li>
-                        <li>HSMベース鍵管理</li>
+                        <li data-lang-key="competency3-item1">同態暗号技術</li>
+                        <li data-lang-key="competency3-item2">マルチパーティ計算(MPC)</li>
+                        <li data-lang-key="competency3-item3">ゼロ知識証明</li>
+                        <li data-lang-key="competency3-item4">HSMベース鍵管理</li>
                     </ul>
                 </div>
             </div>
@@ -198,19 +203,19 @@
     <!-- Services Overview -->
     <section class="services-overview">
         <div class="container">
-            <h2 class="section-title">サービス概要</h2>
+            <h2 class="section-title" data-lang-key="services-title">サービス概要</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fab fa-ethereum"></i>
                     </div>
-                    <h3>DeFiソリューション</h3>
-                    <p>実戦で磨かれたDeFiプロトコル開発力。流動性プール、イールドファーミング、自動取引戦略の実装経験。</p>
+                    <h3 data-lang-key="service1-title">DeFiソリューション</h3>
+                    <p data-lang-key="service1-desc">実戦で磨かれたDeFiプロトコル開発力。流動性プール、イールドファーミング、自動取引戦略の実装経験。</p>
                     <ul class="service-features">
-                        <li>流動性プール設計・実装</li>
-                        <li>イールドファーミング最適化</li>
-                        <li>AI駆動の自動取引戦略</li>
-                        <li>リスク管理システム</li>
+                        <li data-lang-key="service1-feature1">流動性プール設計・実装</li>
+                        <li data-lang-key="service1-feature2">イールドファーミング最適化</li>
+                        <li data-lang-key="service1-feature3">AI駆動の自動取引戦略</li>
+                        <li data-lang-key="service1-feature4">リスク管理システム</li>
                     </ul>
                 </div>
 
@@ -218,13 +223,13 @@
                     <div class="service-icon">
                         <i class="fas fa-image"></i>
                     </div>
-                    <h3>NFTプラットフォーム</h3>
-                    <p>マルチチェーン対応のNFTマーケットプレイス構築。メタデータ管理からロイヤリティ分配まで包括的に対応。</p>
+                    <h3 data-lang-key="service2-title">NFTプラットフォーム</h3>
+                    <p data-lang-key="service2-desc">マルチチェーン対応のNFTマーケットプレイス構築。メタデータ管理からロイヤリティ分配まで包括的に対応。</p>
                     <ul class="service-features">
-                        <li>Ethereum/Tron/BSC対応</li>
-                        <li>ロイヤリティ自動分配</li>
-                        <li>フラクショナルNFT</li>
-                        <li>IPFS統合メタデータ管理</li>
+                        <li data-lang-key="service2-feature1">Ethereum/Tron/BSC対応</li>
+                        <li data-lang-key="service2-feature2">ロイヤリティ自動分配</li>
+                        <li data-lang-key="service2-feature3">フラクショナルNFT</li>
+                        <li data-lang-key="service2-feature4">IPFS統合メタデータ管理</li>
                     </ul>
                 </div>
 
@@ -232,13 +237,13 @@
                     <div class="service-icon">
                         <i class="fas fa-file-contract"></i>
                     </div>
-                    <h3>スマートコントラクト開発</h3>
-                    <p>6年以上のSolidity開発経験。監査済みの安全なコントラクト設計と、ガス最適化の実績。</p>
+                    <h3 data-lang-key="service3-title">スマートコントラクト開発</h3>
+                    <p data-lang-key="service3-desc">6年以上のSolidity開発経験。監査済みの安全なコントラクト設計と、ガス最適化の実績。</p>
                     <ul class="service-features">
-                        <li>Solidity高度な開発</li>
-                        <li>セキュリティ監査対応</li>
-                        <li>ガス最適化技術</li>
-                        <li>アップグレード可能設計</li>
+                        <li data-lang-key="service3-feature1">Solidity高度な開発</li>
+                        <li data-lang-key="service3-feature2">セキュリティ監査対応</li>
+                        <li data-lang-key="service3-feature3">ガス最適化技術</li>
+                        <li data-lang-key="service3-feature4">アップグレード可能設計</li>
                     </ul>
                 </div>
 
@@ -246,13 +251,13 @@
                     <div class="service-icon">
                         <i class="fas fa-wallet"></i>
                     </div>
-                    <h3>暗号資産カストディ</h3>
-                    <p>金融機関グレードのセキュリティを備えた暗号資産管理ソリューション。MPC技術による安全な鍵管理。</p>
+                    <h3 data-lang-key="service4-title">暗号資産カストディ</h3>
+                    <p data-lang-key="service4-desc">金融機関グレードのセキュリティを備えた暗号資産管理ソリューション。MPC技術による安全な鍵管理。</p>
                     <ul class="service-features">
-                        <li>MPC分散鍵管理</li>
-                        <li>マルチシグ対応</li>
-                        <li>ハードウェアウォレット連携</li>
-                        <li>リアルタイム監視・警報</li>
+                        <li data-lang-key="service4-feature1">MPC分散鍵管理</li>
+                        <li data-lang-key="service4-feature2">マルチシグ対応</li>
+                        <li data-lang-key="service4-feature3">ハードウェアウォレット連携</li>
+                        <li data-lang-key="service4-feature4">リアルタイム監視・警報</li>
                     </ul>
                 </div>
 
@@ -260,13 +265,13 @@
                     <div class="service-icon">
                         <i class="fas fa-link"></i>
                     </div>
-                    <h3>クロスチェーン技術</h3>
-                    <p>Cassiniプロジェクトで培ったクロスチェーン技術。異なるブロックチェーン間の相互運用性を実現。</p>
+                    <h3 data-lang-key="service5-title">クロスチェーン技術</h3>
+                    <p data-lang-key="service5-desc">Cassiniプロジェクトで培ったクロスチェーン技術。異なるブロックチェーン間の相互運用性を実現。</p>
                     <ul class="service-features">
-                        <li>チェーン間通信プロトコル</li>
-                        <li>アトミックスワップ</li>
-                        <li>ブリッジ構築</li>
-                        <li>Cosmos IBC統合</li>
+                        <li data-lang-key="service5-feature1">チェーン間通信プロトコル</li>
+                        <li data-lang-key="service5-feature2">アトミックスワップ</li>
+                        <li data-lang-key="service5-feature3">ブリッジ構築</li>
+                        <li data-lang-key="service5-feature4">Cosmos IBC統合</li>
                     </ul>
                 </div>
 
@@ -274,13 +279,13 @@
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>ブロックチェーン分析</h3>
-                    <p>Elasticsearchベースのデータ分析基盤。チェーン上データの収集、分析、可視化を提供。</p>
+                    <h3 data-lang-key="service6-title">ブロックチェーン分析</h3>
+                    <p data-lang-key="service6-desc">Elasticsearchベースのデータ分析基盤。チェーン上データの収集、分析、可視化を提供。</p>
                     <ul class="service-features">
-                        <li>リアルタイムデータ収集</li>
-                        <li>Prometheus監視統合</li>
-                        <li>カスタムダッシュボード</li>
-                        <li>異常検知アラート</li>
+                        <li data-lang-key="service6-feature1">リアルタイムデータ収集</li>
+                        <li data-lang-key="service6-feature2">Prometheus監視統合</li>
+                        <li data-lang-key="service6-feature3">カスタムダッシュボード</li>
+                        <li data-lang-key="service6-feature4">異常検知アラート</li>
                     </ul>
                 </div>
             </div>
@@ -290,74 +295,78 @@
     <!-- Blockchain Technology -->
     <section class="blockchain-tech">
         <div class="container">
-            <h2 class="section-title">対応ブロックチェーン</h2>
+            <h2 class="section-title" data-lang-key="blockchain-tech-title">対応ブロックチェーン</h2>
             <div class="blockchain-grid">
                 <div class="blockchain-item verified">
                     <div class="blockchain-icon">
                         <i class="fab fa-ethereum"></i>
                     </div>
-                    <h3>Ethereum</h3>
-                    <p>6年以上の開発実績</p>
-                    <span class="verified-badge">✓ 実装済</span>
+                    <h3 data-lang-key="blockchain-ethereum-title">Ethereum</h3>
+                    <p data-lang-key="blockchain-ethereum-desc">6年以上の開発実績</p>
+                    <span class="verified-badge" data-lang-key="blockchain-ethereum-badge">✓ 実装済</span>
                 </div>
                 
                 <div class="blockchain-item verified">
                     <div class="blockchain-icon">
                         <i class="fas fa-cube"></i>
                     </div>
-                    <h3>Hyperledger Fabric</h3>
-                    <p>銀行システム実装経験</p>
-                    <span class="verified-badge">✓ 実装済</span>
+                    <h3 data-lang-key="blockchain-hyperledger-title">Hyperledger Fabric</h3>
+                    <p data-lang-key="blockchain-hyperledger-desc">銀行システム実装経験</p>
+                    <span class="verified-badge" data-lang-key="blockchain-hyperledger-badge">✓ 実装済</span>
                 </div>
                 
                 <div class="blockchain-item verified">
                     <div class="blockchain-icon">
                         <i class="fas fa-atom"></i>
                     </div>
-                    <h3>Cosmos/Tendermint</h3>
-                    <p>国際ハッカソン受賞</p>
-                    <span class="verified-badge">✓ 実装済</span>
+                    <h3 data-lang-key="blockchain-cosmos-title">Cosmos/Tendermint</h3>
+                    <p data-lang-key="blockchain-cosmos-desc">国際ハッカソン受賞</p>
+                    <span class="verified-badge" data-lang-key="blockchain-cosmos-badge">✓ 実装済</span>
                 </div>
                 
                 <div class="blockchain-item verified">
                     <div class="blockchain-icon">
                         <i class="fas fa-coins"></i>
                     </div>
-                    <h3>Tron</h3>
-                    <p>DeFiプロトコル運用中</p>
-                    <span class="verified-badge">✓ 実装済</span>
+                    <h3 data-lang-key="blockchain-tron-title">Tron</h3>
+                    <p data-lang-key="blockchain-tron-desc">DeFiプロトコル運用中</p>
+                    <span class="verified-badge" data-lang-key="blockchain-tron-badge">✓ 実装済</span>
                 </div>
                 
-                <div class="blockchain-item">
+                <div class="blockchain-item development">
                     <div class="blockchain-icon">
                         <i class="fas fa-coins"></i>
                     </div>
-                    <h3>Binance Smart Chain</h3>
-                    <p>高速・低コストのDeFiエコシステム</p>
+                    <h3 data-lang-key="blockchain-bsc-title">Binance Smart Chain</h3>
+                    <p data-lang-key="blockchain-bsc-desc">高速・低コストのDeFiエコシステム</p>
+                    <span class="development-badge" data-lang-key="blockchain-bsc-badge">開発予定</span>
                 </div>
                 
-                <div class="blockchain-item">
+                <div class="blockchain-item development">
                     <div class="blockchain-icon">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <h3>Polygon</h3>
-                    <p>Ethereumのレイヤー2スケーリング</p>
+                    <h3 data-lang-key="blockchain-polygon-title">Polygon</h3>
+                    <p data-lang-key="blockchain-polygon-desc">Ethereumのレイヤー2スケーリング</p>
+                    <span class="development-badge" data-lang-key="blockchain-polygon-badge">開発予定</span>
                 </div>
                 
-                <div class="blockchain-item">
+                <div class="blockchain-item development">
                     <div class="blockchain-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Solana</h3>
-                    <p>高性能・低遅延のブロックチェーン</p>
+                    <h3 data-lang-key="blockchain-solana-title">Solana</h3>
+                    <p data-lang-key="blockchain-solana-desc">高性能・低遅延のブロックチェーン</p>
+                    <span class="development-badge" data-lang-key="blockchain-solana-badge">開発予定</span>
                 </div>
                 
-                <div class="blockchain-item">
+                <div class="blockchain-item development">
                     <div class="blockchain-icon">
                         <i class="fas fa-layer-group"></i>
                     </div>
-                    <h3>Polkadot</h3>
-                    <p>マルチチェーン相互運用プラットフォーム</p>
+                    <h3 data-lang-key="blockchain-polkadot-title">Polkadot</h3>
+                    <p data-lang-key="blockchain-polkadot-desc">マルチチェーン相互運用プラットフォーム</p>
+                    <span class="development-badge" data-lang-key="blockchain-polkadot-badge">開発予定</span>
                 </div>
             </div>
         </div>
@@ -366,22 +375,22 @@
     <!-- Notable Projects -->
     <section class="notable-projects">
         <div class="container">
-            <h2 class="section-title">主要プロジェクト実績</h2>
+            <h2 class="section-title" data-lang-key="projects-title">主要プロジェクト実績</h2>
             <div class="projects-grid">
                 <div class="project-card highlight">
                     <div class="project-header">
                         <i class="fas fa-trophy"></i>
-                        <h3>Flares - マルチアセット決済ネットワーク</h3>
+                        <h3 data-lang-key="project1-title">Flares - マルチアセット決済ネットワーク</h3>
                     </div>
                     <div class="project-content">
-                        <p class="project-award">🏆 Cosmos & Tendermint 国際ハッカソン2020 二等賞</p>
-                        <p>ブロックチェーンベースのマルチアセット決済ネットワーク。クロスチェーン技術により、異なるブロックチェーン間での資産移動を実現。</p>
+                        <p class="project-award" data-lang-key="project1-award">🏆 Cosmos & Tendermint 国際ハッカソン2020 二等賞</p>
+                        <p data-lang-key="project1-desc">ブロックチェーンベースのマルチアセット決済ネットワーク。クロスチェーン技術により、異なるブロックチェーン間での資産移動を実現。</p>
                         <div class="project-links">
                             <a href="https://github.com/wangfeiping/flares" target="_blank">
-                                <i class="fab fa-github"></i> GitHub
+                                <i class="fab fa-github"></i> <span data-lang-key="project1-github">GitHub</span>
                             </a>
                             <a href="https://devpost.com/software/flares" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Devpost
+                                <i class="fas fa-external-link-alt"></i> <span data-lang-key="project1-devpost">Devpost</span>
                             </a>
                         </div>
                     </div>
@@ -390,14 +399,14 @@
                 <div class="project-card">
                     <div class="project-header">
                         <i class="fas fa-university"></i>
-                        <h3>上海銀行票据プラットフォーム</h3>
+                        <h3 data-lang-key="project2-title">上海銀行票据プラットフォーム</h3>
                     </div>
                     <div class="project-content">
-                        <p>Hyperledger Fabricを活用した企業向け票据取引システム。銀行グレードのセキュリティと高可用性を実現。</p>
+                        <p data-lang-key="project2-desc">Hyperledger Fabricを活用した企業向け票据取引システム。銀行グレードのセキュリティと高可用性を実現。</p>
                         <ul class="project-tech">
-                            <li>Hyperledger Fabric 1.1</li>
-                            <li>Docker + Mesos</li>
-                            <li>エンタープライズグレード</li>
+                            <li data-lang-key="project2-tech1">Hyperledger Fabric 1.1</li>
+                            <li data-lang-key="project2-tech2">Docker + Mesos</li>
+                            <li data-lang-key="project2-tech3">エンタープライズグレード</li>
                         </ul>
                     </div>
                 </div>
@@ -405,14 +414,14 @@
                 <div class="project-card">
                     <div class="project-header">
                         <i class="fas fa-link"></i>
-                        <h3>Cassini クロスチェーンプロジェクト</h3>
+                        <h3 data-lang-key="project3-title">Cassini クロスチェーンプロジェクト</h3>
                     </div>
                     <div class="project-content">
-                        <p>異なるブロックチェーン間の相互運用性を実現する研究開発プロジェクト。チェーン間通信とクロスチェーン取引を可能に。</p>
+                        <p data-lang-key="project3-desc">異なるブロックチェーン間の相互運用性を実現する研究開発プロジェクト。チェーン間通信とクロスチェーン取引を可能に。</p>
                         <ul class="project-tech">
-                            <li>オープンソース</li>
-                            <li>IBC プロトコル</li>
-                            <li>継続的な研究開発</li>
+                            <li data-lang-key="project3-tech1">オープンソース</li>
+                            <li data-lang-key="project3-tech2">IBC プロトコル</li>
+                            <li data-lang-key="project3-tech3">継続的な研究開発</li>
                         </ul>
                     </div>
                 </div>
@@ -420,14 +429,14 @@
                 <div class="project-card">
                     <div class="project-header">
                         <i class="fas fa-lock"></i>
-                        <h3>暗号資産カストディ2.0</h3>
+                        <h3 data-lang-key="project4-title">暗号資産カストディ2.0</h3>
                     </div>
                     <div class="project-content">
-                        <p>次世代の暗号資産管理プラットフォーム。MPC技術とAI駆動の量化戦略を統合した革新的なソリューション。</p>
+                        <p data-lang-key="project4-desc">次世代の暗号資産管理プラットフォーム。MPC技術とAI駆動の量化戦略を統合した革新的なソリューション。</p>
                         <ul class="project-tech">
-                            <li>Go言語による再構築</li>
-                            <li>AI量化アルゴリズム</li>
-                            <li>マルチチェーン対応</li>
+                            <li data-lang-key="project4-tech1">Go言語による再構築</li>
+                            <li data-lang-key="project4-tech2">AI量化アルゴリズム</li>
+                            <li data-lang-key="project4-tech3">マルチチェーン対応</li>
                         </ul>
                     </div>
                 </div>
@@ -438,10 +447,10 @@
     <!-- Technical Expertise -->
     <section class="technical-expertise">
         <div class="container">
-            <h2 class="section-title">技術専門性</h2>
+            <h2 class="section-title" data-lang-key="expertise-title">技術専門性</h2>
             <div class="expertise-grid">
                 <div class="expertise-category">
-                    <h3><i class="fas fa-code"></i> プログラミング言語</h3>
+                    <h3><i class="fas fa-code"></i> <span data-lang-key="expertise-programming">プログラミング言語</span></h3>
                     <div class="tech-tags">
                         <span class="tech-tag expert">Go (6年)</span>
                         <span class="tech-tag expert">Java (10年)</span>
@@ -453,7 +462,7 @@
                 </div>
 
                 <div class="expertise-category">
-                    <h3><i class="fas fa-cubes"></i> ブロックチェーンフレームワーク</h3>
+                    <h3><i class="fas fa-cubes"></i> <span data-lang-key="expertise-blockchain">ブロックチェーンフレームワーク</span></h3>
                     <div class="tech-tags">
                         <span class="tech-tag expert">Ethereum</span>
                         <span class="tech-tag expert">Hyperledger Fabric</span>
@@ -464,7 +473,7 @@
                 </div>
 
                 <div class="expertise-category">
-                    <h3><i class="fas fa-shield-alt"></i> セキュリティ・暗号技術</h3>
+                    <h3><i class="fas fa-shield-alt"></i> <span data-lang-key="expertise-security">セキュリティ・暗号技術</span></h3>
                     <div class="tech-tags">
                         <span class="tech-tag">同態暗号</span>
                         <span class="tech-tag">MPC (マルチパーティ計算)</span>
@@ -475,7 +484,7 @@
                 </div>
 
                 <div class="expertise-category">
-                    <h3><i class="fas fa-server"></i> インフラ・DevOps</h3>
+                    <h3><i class="fas fa-server"></i> <span data-lang-key="expertise-devops">インフラ・DevOps</span></h3>
                     <div class="tech-tags">
                         <span class="tech-tag">Docker</span>
                         <span class="tech-tag">Kubernetes</span>
@@ -492,20 +501,20 @@
     <!-- Use Cases -->
     <section class="use-cases">
         <div class="container">
-            <h2 class="section-title">活用事例</h2>
+            <h2 class="section-title" data-lang-key="cases-title">活用事例</h2>
             <div class="cases-grid">
                 <div class="case-card">
                     <div class="case-image">
                         <i class="fas fa-university"></i>
                     </div>
                     <div class="case-content">
-                        <h3>金融機関様</h3>
-                        <h4>上海銀行票据取引システム</h4>
-                        <p>Hyperledger Fabricを活用した企業間票据取引プラットフォーム。ブロックチェーン技術により取引の透明性と効率性を大幅に向上。</p>
+                        <h3 data-lang-key="case1-client">金融機関様</h3>
+                        <h4 data-lang-key="case1-title">上海銀行票据取引システム</h4>
+                        <p data-lang-key="case1-desc">Hyperledger Fabricを活用した企業間票据取引プラットフォーム。ブロックチェーン技術により取引の透明性と効率性を大幅に向上。</p>
                         <div class="case-results">
-                            <span class="result-item">取引効率化</span>
-                            <span class="result-item">改ざん防止</span>
-                            <span class="result-item">監査透明性</span>
+                            <span class="result-item" data-lang-key="case1-result1">取引効率化</span>
+                            <span class="result-item" data-lang-key="case1-result2">改ざん防止</span>
+                            <span class="result-item" data-lang-key="case1-result3">監査透明性</span>
                         </div>
                     </div>
                 </div>
@@ -515,13 +524,13 @@
                         <i class="fas fa-coins"></i>
                     </div>
                     <div class="case-content">
-                        <h3>暗号資産取引所様</h3>
-                        <h4>カストディ&DeFi統合プラットフォーム</h4>
-                        <p>中央集権型と分散型の長所を組み合わせたハイブリッド資産管理システム。AI駆動の量化戦略により収益最大化を実現。</p>
+                        <h3 data-lang-key="case2-client">暗号資産取引所様</h3>
+                        <h4 data-lang-key="case2-title">カストディ&DeFi統合プラットフォーム</h4>
+                        <p data-lang-key="case2-desc">中央集権型と分散型の長所を組み合わせたハイブリッド資産管理システム。AI駆動の量化戦略により収益最大化を実現。</p>
                         <div class="case-results">
-                            <span class="result-item">セキュア管理</span>
-                            <span class="result-item">AI最適化</span>
-                            <span class="result-item">24時間取引</span>
+                            <span class="result-item" data-lang-key="case2-result1">セキュア管理</span>
+                            <span class="result-item" data-lang-key="case2-result2">AI最適化</span>
+                            <span class="result-item" data-lang-key="case2-result3">24時間取引</span>
                         </div>
                     </div>
                 </div>
@@ -531,13 +540,13 @@
                         <i class="fas fa-globe"></i>
                     </div>
                     <div class="case-content">
-                        <h3>国際決済事業者様</h3>
-                        <h4>クロスボーダー決済ネットワーク</h4>
-                        <p>Cosmosベースのマルチアセット決済システム。異なる法定通貨と暗号資産間のシームレスな価値移転を実現。</p>
+                        <h3 data-lang-key="case3-client">国際決済事業者様</h3>
+                        <h4 data-lang-key="case3-title">クロスボーダー決済ネットワーク</h4>
+                        <p data-lang-key="case3-desc">Cosmosベースのマルチアセット決済システム。異なる法定通貨と暗号資産間のシームレスな価値移転を実現。</p>
                         <div class="case-results">
-                            <span class="result-item">即時決済</span>
-                            <span class="result-item">低手数料</span>
-                            <span class="result-item">マルチ通貨</span>
+                            <span class="result-item" data-lang-key="case3-result1">即時決済</span>
+                            <span class="result-item" data-lang-key="case3-result2">低手数料</span>
+                            <span class="result-item" data-lang-key="case3-result3">マルチ通貨</span>
                         </div>
                     </div>
                 </div>
@@ -549,23 +558,23 @@
     <section class="contact-cta">
         <div class="container">
             <div class="cta-content">
-                <h2>9年以上の実績を持つブロックチェーン専門チーム</h2>
-                <p>国際的に認められた技術力と豊富な実装経験で、お客様のWeb3ビジネスを成功に導きます。</p>
+                <h2 data-lang-key="cta-title">9年以上の実績を持つブロックチェーン専門チーム</h2>
+                <p data-lang-key="cta-desc">国際的に認められた技術力と豊富な実装経験で、お客様のWeb3ビジネスを成功に導きます。</p>
                 <div class="cta-stats">
                     <div class="stat-item">
                         <span class="stat-number">9+</span>
-                        <span class="stat-label">年の開発実績</span>
+                        <span class="stat-label" data-lang-key="cta-stat1">年の開発実績</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">20+</span>
-                        <span class="stat-label">完了プロジェクト</span>
+                        <span class="stat-label" data-lang-key="cta-stat2">完了プロジェクト</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">6+</span>
-                        <span class="stat-label">対応チェーン</span>
+                        <span class="stat-label" data-lang-key="cta-stat3">対応チェーン</span>
                     </div>
                 </div>
-                <a href="index.html#contact" class="cta-button">お問い合わせ</a>
+                <a href="index.html#contact" class="cta-button" data-lang-key="cta-button">お問い合わせ</a>
             </div>
         </div>
     </section>
@@ -574,13 +583,13 @@
     <footer class="footer">
         <div class="container">
             <nav class="footer-nav">
-                <a href="index.html#news">お知らせ</a>
-                <a href="index.html#company">会社概要</a>
-                <a href="index.html#message">代表挨拶</a>
-                <a href="index.html#business">事業内容</a>
-                <a href="index.html#recruit">採用情報</a>
-                <a href="index.html#access">アクセス</a>
-                <a href="index.html#contact">お問い合わせ</a>
+                <a href="index.html#news" data-lang-key="footer-news">お知らせ</a>
+                <a href="index.html#company" data-lang-key="footer-company">会社概要</a>
+                <a href="index.html#message" data-lang-key="footer-message">代表挨拶</a>
+                <a href="index.html#business" data-lang-key="footer-business">事業内容</a>
+                <a href="index.html#recruit" data-lang-key="footer-recruit">採用情報</a>
+                <a href="index.html#access" data-lang-key="footer-access">アクセス</a>
+                <a href="index.html#contact" data-lang-key="footer-contact">お問い合わせ</a>
             </nav>
             <div class="copyright">
                 TERABOX Copyright.
@@ -589,8 +598,7 @@
     </footer>
 
     <script src="script.js"></script>
-	<script src="blockchain-web3.js"></script>
-    
-    
+    <script src="blockchain-web3.js"></script>
+    <script src="js/blockchain-web3-lang.js"></script>
 </body>
 </html>

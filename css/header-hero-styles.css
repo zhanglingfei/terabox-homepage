@@ -15,11 +15,12 @@
     transition: all 0.3s;
     display: flex;
     align-items: center;
-    gap: 1px;
+    justify-content: center;
     color: #999;
     width: 50px;
     height: 40px;
-    font-size: 21px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .lang-btn:hover {
@@ -34,9 +35,11 @@
     color: #000;
 }
 
-.lang-btn span {
-    font-size: 16px;
-    display: none; /* Hide emoji since we're using images */
+.lang-text {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
 }
 
 .lang-btn .fas {
@@ -47,22 +50,14 @@
     color: #000;
 }
 
-/* Language Switcher Flag Images */
-.flag-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+/* Language text hover effects */
+.lang-btn:hover .lang-text {
+    transform: scale(1.1);
 }
 
-.lang-btn:hover .flag-image {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
-.lang-btn.active .flag-image {
-    box-shadow: 0 0 5px rgba(159, 213, 0, 0.5);
+.lang-btn.active .lang-text {
+    color: #000;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Header */
@@ -254,7 +249,7 @@
     left: 25px;
     width: 75px;
     height: 75px;
-    background-image: url('images/logo.svg');
+    background-image: url('../images/logo.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -269,7 +264,7 @@
     right: 100px;
     width: 100px;
     height: 100px;
-    background-image: url('images/hand.svg');
+    background-image: url('../images/hand.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -537,9 +532,8 @@
 
 /* Responsive Design for Header and Hero */
 @media (max-width: 768px) {
-    .flag-image {
-        width: 18px;
-        height: 13px;
+    .lang-text {
+        font-size: 12px;
     }
     
     .nav-links {
